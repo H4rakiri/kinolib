@@ -4,7 +4,11 @@ let cache = null;
 
 export async function loadCatalog() {
   if (cache) return cache;
-  const res = await fetch(`${import.meta.env.BASE_URL}data/catalog.json`);
+  // no-cache: браузер ревалидирует по ETag (304, если каталог не менялся;
+  // свежая версия — сразу после еженедельного обновления, без ручного сброса).
+  const res = await fetch(`${import.meta.env.BASE_URL}data/catalog.json`, {
+    cache: 'no-cache',
+  });
   if (!res.ok) throw new Error(`Не удалось загрузить каталог: ${res.status}`);
   cache = await res.json();
   return cache;
