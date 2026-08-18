@@ -21,8 +21,10 @@ export default function MovieCard({ item, status, onOpen }) {
         ) : (
           <div className="card-noposter">{item.title}</div>
         )}
-        {item.ratingKp ? (
-          <span className="card-rating">{item.ratingKp.toFixed(1)}</span>
+        {item.ratingImdb || item.ratingTmdb ? (
+          <span className="card-rating">
+            {(item.ratingImdb || item.ratingTmdb).toFixed(1)}
+          </span>
         ) : null}
         {st ? (
           <span className={`card-status status-${status}`} title={st.label}>

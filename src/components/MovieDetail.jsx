@@ -45,14 +45,14 @@ export default function MovieDetail({ item, status, onSetStatus, onClose }) {
               ))}
             </div>
             <div className="sheet-ratings">
-              {item.ratingKp ? (
-                <span className="rate rate-kp">
-                  КП <b>{item.ratingKp.toFixed(1)}</b>
-                </span>
-              ) : null}
               {item.ratingImdb ? (
                 <span className="rate rate-imdb">
                   IMDb <b>{item.ratingImdb.toFixed(1)}</b>
+                </span>
+              ) : null}
+              {item.ratingTmdb ? (
+                <span className="rate rate-tmdb">
+                  TMDB <b>{item.ratingTmdb.toFixed(1)}</b>
                 </span>
               ) : null}
             </div>
@@ -87,7 +87,7 @@ export default function MovieDetail({ item, status, onSetStatus, onClose }) {
               <button
                 key={s}
                 className={`status-btn ${active ? 'active' : ''} status-${s}`}
-                onClick={() => onSetStatus(item.id, active ? null : s)}
+                onClick={() => onSetStatus(item.id, active ? null : s, item)}
               >
                 {STATUS[s].icon} {STATUS[s].label}
               </button>

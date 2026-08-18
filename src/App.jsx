@@ -18,6 +18,7 @@ import {
   getCollection,
   toggleInCollection,
   inCollection,
+  getSnapshot,
   replaceLibrary,
 } from './lib/library.js';
 import {
@@ -27,11 +28,13 @@ import {
   fetchRemote,
   pushRemote,
 } from './lib/sync.js';
+import { getTmdbKey, setTmdbKey, hasTmdbKey, fetchTmdbDetails } from './lib/tmdb.js';
 import { STATUS, STATUS_ORDER } from './lib/format.js';
 import MovieGrid from './components/MovieGrid.jsx';
 import MovieDetail from './components/MovieDetail.jsx';
 import CollectionView from './components/CollectionView.jsx';
 import AddPicker from './components/AddPicker.jsx';
+import SearchView from './components/SearchView.jsx';
 import SyncSettings from './components/SyncSettings.jsx';
 
 const TABS = [
@@ -48,19 +51,19 @@ export default function App() {
   const [active, setActive] = useState(null); // открытый фильм
   const [openCol, setOpenCol] = useState(null); // id открытой подборки
   const [picker, setPicker] = useState(null); // { colId } — оверлей добавления
+  const [tmdbKey, setTmdbKeyState] = useState(getTmdbKey);
 
   // --- Синхронизация с приватным репозиторием -------------------------
   const [sync, setSync] = useState(loadSyncConfig);
   const [syncStatus, setSyncStatus] = useState('off'); // off|sync|push|idle|error
   const [syncMsg, setSyncMsg] = useState('');
-  const shaRef = useRef(null); // sha текущего remote library.json
-  const syncedTs = useRef(null); // updatedAt последнего синхронизированного состояния
-  const ready = useRef(false); // прошёл ли первичный pull (иначе не пушим)
+  const shaRef = useRef(null);
+  const syncedTs = useRef(null);
+  const ready = useRef(false);
   const libRef = useRef(library);
   libRef.current = library;
   const pushTimer = useRef(null);
 
-  // Согласование локальной и облачной версии: новее по updatedAt — побеждает.
   const reconcile = useCallback(async (cfg) => {
     if (!isConfigured(cfg)) {
       setSyncStatus('off');
@@ -79,7 +82,6 @@ export default function App() {
         syncedTs.current = remote.data.updatedAt || null;
         setLibrary(replaceLibrary(remote.data));
       } else {
-        // Локальная версия новее (или файла нет) — отправляем её в облако.
         const newSha = await pushRemote(cfg, local, remote?.sha || null);
         shaRef.current = newSha;
         syncedTs.current = local.updatedAt || null;
@@ -92,16 +94,14 @@ export default function App() {
     }
   }, []);
 
-  // Первичный pull при монтировании / смене настроек.
   useEffect(() => {
     reconcile(sync);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sync.repo, sync.token]);
 
-  // Автопуш при изменениях библиотеки (с дебаунсом).
   useEffect(() => {
     if (!isConfigured(sync) || !ready.current) return;
-    if (library.updatedAt === syncedTs.current) return; // это уже синхронизировано
+    if (library.updatedAt === syncedTs.current) return;
     clearTimeout(pushTimer.current);
     pushTimer.current = setTimeout(async () => {
       try {
@@ -124,6 +124,11 @@ export default function App() {
     setSync(cfg);
   };
 
+  const onSaveTmdbKey = (key) => {
+    setTmdbKey(key);
+    setTmdbKeyState(key);
+  };
+
   useEffect(() => {
     loadCatalog().then(setCatalog).catch((e) => setError(e.message));
   }, []);
@@ -134,9 +139,31 @@ export default function App() {
     return m;
   }, [catalog]);
 
+  // Резолвер тайтла: сначала каталог, затем снапшот из библиотеки (нишевое кино).
+  const resolve = useCallback(
+    (id) => byId.get(id) || getSnapshot(library, id),
+    [byId, library]
+  );
+
   const statusOf = (id) => getStatus(library, id);
-  const onSetStatus = (id, status) =>
-    setLibrary(setStatusLib(library, id, status));
+
+  // Открытие: частичные результаты поиска догружаем деталями из TMDB.
+  const openItem = useCallback(async (item) => {
+    setActive(item);
+    if (item && item._partial && hasTmdbKey()) {
+      try {
+        const full = await fetchTmdbDetails(item);
+        setActive((cur) => (cur && cur.tmdbId === item.tmdbId ? full : cur));
+      } catch {
+        /* оставляем частичные данные */
+      }
+    }
+  }, []);
+
+  const onSetStatus = (id, status, item) => {
+    const snap = !byId.has(id) && item ? item : null;
+    setLibrary(setStatusLib(library, id, status, snap));
+  };
 
   if (error) return <div className="fatal">Ошибка: {error}</div>;
   if (!catalog) return <div className="loading">Загрузка каталога…</div>;
@@ -167,18 +194,23 @@ export default function App() {
 
       <main className="content">
         {tab === 'catalog' && (
-          <CatalogView catalog={catalog} getStatus={statusOf} onOpen={setActive} />
+          <CatalogView catalog={catalog} getStatus={statusOf} onOpen={openItem} />
         )}
         {tab === 'search' && (
-          <SearchView catalog={catalog} getStatus={statusOf} onOpen={setActive} />
+          <SearchView
+            catalog={catalog}
+            tmdbKey={tmdbKey}
+            getStatus={statusOf}
+            onOpen={openItem}
+          />
         )}
         {tab === 'library' &&
           (currentCol ? (
             <CollectionView
               col={currentCol}
-              byId={byId}
+              resolve={resolve}
               getStatus={statusOf}
-              onOpen={setActive}
+              onOpen={openItem}
               onBack={() => setOpenCol(null)}
               onAdd={() => setPicker({ colId: currentCol.id })}
               onDelete={() => {
@@ -190,17 +222,19 @@ export default function App() {
             />
           ) : (
             <LibraryView
-              byId={byId}
+              resolve={resolve}
               library={library}
               setLibrary={setLibrary}
               getStatus={statusOf}
-              onOpen={setActive}
+              onOpen={openItem}
               onOpenCol={setOpenCol}
               sync={sync}
               syncStatus={syncStatus}
               syncMsg={syncMsg}
               onSaveSync={onSaveSync}
               onSyncNow={() => reconcile(sync)}
+              tmdbKey={tmdbKey}
+              onSaveTmdbKey={onSaveTmdbKey}
             />
           ))}
       </main>
@@ -218,10 +252,11 @@ export default function App() {
         <AddPicker
           catalog={catalog}
           library={library}
-          colId={picker.colId}
+          tmdbKey={tmdbKey}
+          resolve={resolve}
           isIn={(id) => inCollection(library, picker.colId, id)}
-          onToggle={(id) =>
-            setLibrary(toggleInCollection(library, picker.colId, id))
+          onToggle={(id, snap) =>
+            setLibrary(toggleInCollection(library, picker.colId, id, snap))
           }
           onClose={() => setPicker(null)}
         />
@@ -232,8 +267,9 @@ export default function App() {
 
 // --- Каталог: коллекции + жанры (компактно, в одну прокручиваемую строку) ---
 function CatalogView({ catalog, getStatus, onOpen }) {
-  const [sel, setSel] = useState({ kind: 'collection', id: 'kp_top250' });
-  const [sortBy, setSortBy] = useState('ratingKp');
+  const firstCol = catalog.collections[0]?.id;
+  const [sel, setSel] = useState({ kind: 'collection', id: firstCol });
+  const [sortBy, setSortBy] = useState('ratingImdb');
 
   const items = useMemo(() => {
     if (sel.kind === 'collection')
@@ -275,11 +311,9 @@ function CatalogView({ catalog, getStatus, onOpen }) {
         <span className="count">{items.length}</span>
         <button
           className="sort-toggle"
-          onClick={() =>
-            setSortBy(sortBy === 'ratingKp' ? 'ratingImdb' : 'ratingKp')
-          }
+          onClick={() => setSortBy(sortBy === 'ratingImdb' ? 'year' : 'ratingImdb')}
         >
-          {sortBy === 'ratingKp' ? 'Кинопоиск' : 'IMDb'} ↓
+          {sortBy === 'ratingImdb' ? 'По оценке' : 'По году'} ↓
         </button>
       </div>
 
@@ -288,37 +322,9 @@ function CatalogView({ catalog, getStatus, onOpen }) {
   );
 }
 
-// --- Поиск --------------------------------------------------------------
-function SearchView({ catalog, getStatus, onOpen }) {
-  const [q, setQ] = useState('');
-  const results = useMemo(() => searchItems(catalog, q), [catalog, q]);
-
-  return (
-    <div>
-      <input
-        className="search-input"
-        placeholder="Поиск фильма, сериала, аниме…"
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-        autoFocus
-      />
-      {q.trim() ? (
-        <MovieGrid
-          items={results}
-          getStatus={getStatus}
-          onOpen={onOpen}
-          empty="Ничего не найдено"
-        />
-      ) : (
-        <div className="empty">Начните вводить название</div>
-      )}
-    </div>
-  );
-}
-
 // --- Моя библиотека -----------------------------------------------------
 function LibraryView({
-  byId,
+  resolve,
   library,
   setLibrary,
   getStatus,
@@ -329,6 +335,8 @@ function LibraryView({
   syncMsg,
   onSaveSync,
   onSyncNow,
+  tmdbKey,
+  onSaveTmdbKey,
 }) {
   const [creating, setCreating] = useState(false);
   const [name, setName] = useState('');
@@ -358,7 +366,6 @@ function LibraryView({
 
   return (
     <div>
-      {/* Подборки */}
       <div className="lib-head">
         <h3>Подборки</h3>
         {!creating && (
@@ -407,7 +414,6 @@ function LibraryView({
         </div>
       )}
 
-      {/* Статусы */}
       {totalEntries === 0 ? (
         <div className="hint" style={{ marginTop: 28 }}>
           Отмечайте фильмы статусом в карточке — они появятся здесь.
@@ -415,7 +421,7 @@ function LibraryView({
       ) : (
         STATUS_ORDER.map((s) => {
           const items = entriesByStatus(library, s)
-            .map((e) => byId.get(e.id))
+            .map((e) => resolve(e.id))
             .filter(Boolean);
           if (!items.length) return null;
           return (
@@ -437,6 +443,8 @@ function LibraryView({
         msg={syncMsg}
         onSave={onSaveSync}
         onSyncNow={onSyncNow}
+        tmdbKey={tmdbKey}
+        onSaveTmdbKey={onSaveTmdbKey}
       />
 
       <div className="lib-footer">

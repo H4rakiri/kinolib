@@ -1,221 +1,260 @@
 #!/usr/bin/env node
 /*
- * Сбор каталога для «Киноленты».
+ * Сбор каталога «Киноленты» из официальных данных IMDb + TMDB.
  *
- * Запускается вручную (`KP_TOKEN=... npm run fetch-data`) или по расписанию через
- * GitHub Actions (.github/workflows/fetch-data.yml). Результат — public/data/catalog.json
- * в той же схеме, что и раньше: сайт остаётся чистой статикой, ключ живёт только
- * в Secrets репозитория и в файл не попадает.
+ * Ранжирование — по РЕАЛЬНОМУ рейтингу IMDb (датасет title.ratings, бесплатно,
+ * без лимитов). Русские названия, постеры, описания, сезоны/серии — из TMDB
+ * по imdb-id. Кинопоиск не используется.
  *
- * Источник — неофициальный API Кинопоиска (https://kinopoiskapiunofficial.tech):
- * русские названия, постеры, рейтинги КП + IMDb, жанры, хронометраж, сезоны/серии.
- *
- * Бесплатный тариф лимитирован (~500 запросов/сутки, 20/сек), поэтому глубину
- * (pages) держим умеренной. Каждый фильм = 1 детальный запрос (за хронометражом),
- * каждый сериал/аниме = ещё 1 запрос за сезонами.
+ * Результат — public/data/catalog.json (топы по типам и жанрам). Сайт статичен,
+ * ключ TMDB живёт только в Secrets репозитория и в файл не попадает.
  *
  * Переменные окружения:
- *   KP_TOKEN — обязательный ключ kinopoiskapiunofficial.tech
+ *   TMDB_TOKEN — ключ themoviedb.org (v3 auth), обязателен для постеров/русских названий
  */
 
 import { writeFile, mkdir } from 'node:fs/promises';
-import { dirname, resolve } from 'node:path';
+import { dirname, resolve as pathResolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createGunzip } from 'node:zlib';
+import { createInterface } from 'node:readline';
 
-const KP_TOKEN = process.env.KP_TOKEN;
-const KP = 'https://kinopoiskapiunofficial.tech/api';
-
-if (!KP_TOKEN) {
-  console.error('Нужен KP_TOKEN (ключ kinopoiskapiunofficial.tech).');
+const TMDB_TOKEN = process.env.TMDB_TOKEN;
+if (!TMDB_TOKEN) {
+  console.error('Нужен TMDB_TOKEN (ключ themoviedb.org). Без него не будет постеров/названий.');
   process.exit(1);
 }
 
-// Именованные коллекции. anime — через фильтр по жанру, остальные — через collections.
-const COLLECTIONS = [
-  { id: 'kp_top250', title: 'Топ Кинопоиска', kind: 'movie', kpType: 'TOP_250_MOVIES', pages: 5 },
-  { id: 'popular', title: 'Популярное', kind: 'movie', kpType: 'TOP_POPULAR_MOVIES', pages: 2 },
-  { id: 'series', title: 'Сериалы', kind: 'tv', kpType: 'POPULAR_SERIES', pages: 2 },
-  { id: 'anime_top', title: 'Топ аниме', kind: 'anime', animeFilter: true, pages: 3 },
+const IMDB = 'https://datasets.imdbws.com';
+const TMDB = 'https://api.themoviedb.org/3';
+const IMG = 'https://image.tmdb.org/t/p/w500';
+
+// IMDb-жанры (англ.) → русские. Порядок RU-списка = порядок чипов в интерфейсе.
+const GENRE_RU = {
+  Drama: 'драма', Comedy: 'комедия', Action: 'боевик', Thriller: 'триллер',
+  'Sci-Fi': 'фантастика', Fantasy: 'фэнтези', Adventure: 'приключения',
+  Crime: 'криминал', Mystery: 'детектив', Romance: 'мелодрама', Horror: 'ужасы',
+  Animation: 'мультфильм', Documentary: 'документальный', War: 'военный',
+  Western: 'вестерн', History: 'история', Biography: 'биография', Family: 'семейный',
+  Music: 'музыка', Musical: 'мюзикл', Sport: 'спорт',
+};
+const GENRE_ORDER = [
+  'драма', 'комедия', 'боевик', 'триллер', 'фантастика', 'фэнтези',
+  'приключения', 'криминал', 'детектив', 'мелодрама', 'ужасы', 'мультфильм',
+  'военный', 'вестерн', 'история', 'документальный',
 ];
 
-// Куратор­ский список жанров для чипов и «топов по жанру» (в порядке показа).
-const GENRES = [
-  'драма', 'комедия', 'боевик', 'триллер', 'фантастика', 'фэнтези',
-  'приключения', 'криминал', 'детектив', 'мелодрама', 'ужасы',
-  'аниме', 'мультфильм', 'военный', 'история',
-];
+const MOVIE_VOTES = 25000; // порог голосов, чтобы в топах было реальное кино
+const SERIES_VOTES = 8000;
+const PER_GENRE = 120;
+const TOP_MOVIES = 250;
+const TOP_SERIES = 150;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function kp(path, tries = 0) {
-  const res = await fetch(`${KP}${path}`, {
-    headers: { 'X-API-KEY': KP_TOKEN, Accept: 'application/json' },
+// Потоковое чтение gzip-TSV построчно (файлы большие — не грузим целиком).
+async function* tsvLines(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`IMDb ${url} → ${res.status}`);
+  const rl = createInterface({
+    input: (await import('node:stream')).Readable.fromWeb(res.body).pipe(createGunzip()),
+    crlfDelay: Infinity,
   });
-  if (res.status === 429 && tries < 4) {
-    await sleep(2000);
-    return kp(path, tries + 1);
+  let first = true;
+  for await (const line of rl) {
+    if (first) { first = false; continue; } // заголовок
+    yield line.split('\t');
   }
-  if (!res.ok) throw new Error(`KP ${path} → ${res.status}`);
+}
+
+async function loadRatings() {
+  console.log('Скачиваю рейтинги IMDb…');
+  const map = new Map();
+  for await (const [tconst, avg, votes] of tsvLines(`${IMDB}/title.ratings.tsv.gz`)) {
+    map.set(tconst, { rating: parseFloat(avg), votes: parseInt(votes, 10) });
+  }
+  console.log(`  рейтингов: ${map.size}`);
+  return map;
+}
+
+async function loadUniverse(ratings) {
+  console.log('Скачиваю базовые данные IMDb (жанры/тип/год)…');
+  const universe = [];
+  for await (const row of tsvLines(`${IMDB}/title.basics.tsv.gz`)) {
+    const [tconst, titleType, primaryTitle, originalTitle, isAdult, startYear, , runtime, genres] = row;
+    if (isAdult === '1') continue;
+    const isMovie = titleType === 'movie';
+    const isSeries = titleType === 'tvSeries' || titleType === 'tvMiniSeries';
+    if (!isMovie && !isSeries) continue;
+    const r = ratings.get(tconst);
+    if (!r || !r.rating) continue;
+    if (r.votes < (isMovie ? MOVIE_VOTES : SERIES_VOTES)) continue;
+    universe.push({
+      tconst,
+      type: isMovie ? 'movie' : 'tv',
+      title: primaryTitle,
+      orig: originalTitle,
+      year: startYear === '\\N' ? null : parseInt(startYear, 10),
+      runtime: runtime === '\\N' ? null : parseInt(runtime, 10),
+      genres: genres === '\\N' ? [] : genres.split(','),
+      rating: r.rating,
+      votes: r.votes,
+    });
+  }
+  console.log(`  прошло порог: ${universe.length}`);
+  return universe;
+}
+
+const byRating = (a, b) => b.rating - a.rating || b.votes - a.votes;
+
+// --- TMDB ---------------------------------------------------------------
+async function tmdb(path) {
+  const sep = path.includes('?') ? '&' : '?';
+  const res = await fetch(`${TMDB}${path}${sep}api_key=${TMDB_TOKEN}`);
+  if (res.status === 429) { await sleep(1000); return tmdb(path); }
+  if (!res.ok) throw new Error(`TMDB ${path} → ${res.status}`);
   return res.json();
 }
 
-// Сериал ли это (для показа сезонов/серий). Аниме может быть и фильмом,
-// и сериалом — различаем по типу/флагу KP, а не по жанру.
-function isSerial(film) {
-  return (
-    ['TV_SERIES', 'MINI_SERIES', 'TV_SHOW'].includes(film.type) ||
-    film.serial === true
-  );
-}
-
-function classify(film) {
-  const genres = (film.genres || []).map((g) => g.genre);
-  if (genres.includes('аниме')) return 'anime';
-  if (isSerial(film)) return 'tv';
-  return 'movie';
-}
-
-// Собираем «сырые» карточки (kinopoiskId + базовые поля) из коллекции.
-async function collectFromCollection(col, seen) {
-  const out = [];
-  for (let page = 1; page <= col.pages; page++) {
-    const data = await kp(
-      `/v2.2/films/collections?type=${col.kpType}&page=${page}`
-    );
-    for (const it of data.items || []) out.push(it);
-    if (page >= (data.totalPages || page)) break;
-    await sleep(120);
-  }
-  return out;
-}
-
-// Топ аниме — через фильтр по жанру (id 24) с сортировкой по рейтингу.
-async function collectAnime(col) {
-  const out = [];
-  for (let page = 1; page <= col.pages; page++) {
-    const data = await kp(
-      `/v2.2/films?genres=24&order=RATING&type=ALL&ratingFrom=7&page=${page}`
-    );
-    for (const it of data.items || []) out.push(it);
-    if (page >= (data.totalPages || page)) break;
-    await sleep(120);
-  }
-  return out;
-}
-
-// Полный хронометраж сериала/аниме: суммируем серии всех сезонов × длину серии.
-async function seriesRuntime(kpId, episodeRuntime) {
-  try {
-    const data = await kp(`/v2.2/films/${kpId}/seasons`);
-    const seasons = data.items || [];
-    const episodes = seasons.reduce((n, s) => n + (s.episodes?.length || 0), 0);
-    return {
-      seasons: seasons.length || null,
-      episodes: episodes || null,
-      runtime: episodes && episodeRuntime ? episodes * episodeRuntime : null,
-    };
-  } catch {
-    return { seasons: null, episodes: null, runtime: null };
-  }
-}
-
-// Обогащаем карточку деталями (хронометраж) и приводим к нашей схеме.
-async function toItem(raw) {
-  let detail = raw;
-  // В коллекциях нет filmLength — тянем деталь ради хронометража/описания.
-  try {
-    detail = { ...raw, ...(await kp(`/v2.2/films/${raw.kinopoiskId}`)) };
-    await sleep(120);
-  } catch {
-    /* остаёмся с тем, что есть */
-  }
-
-  const type = classify(detail);
-  const genres = (detail.genres || []).map((g) => g.genre);
-  const episodeRuntime = detail.filmLength || null;
-
-  // Сезоны/серии — только для настоящих сериалов. Аниме-фильмы (serial=false)
-  // остаются с обычным хронометражом filmLength.
-  let seasons = null,
-    episodes = null,
-    runtime = episodeRuntime,
-    epRt = null;
-
-  if (isSerial(detail)) {
-    const s = await seriesRuntime(detail.kinopoiskId, episodeRuntime);
-    seasons = s.seasons;
-    episodes = s.episodes;
-    epRt = episodeRuntime;
-    runtime = s.runtime || null;
-    await sleep(120);
-  }
-
-  const lists = genres
-    .filter((g) => GENRES.includes(g))
-    .map((g) => `genre_${g}`);
-
-  return {
-    id: detail.imdbId || `kp${detail.kinopoiskId}`,
-    kpId: detail.kinopoiskId,
+async function enrich(entry) {
+  const item = {
+    id: entry.tconst,
+    kpId: null,
     tmdbId: null,
-    type,
-    title: detail.nameRu || detail.nameOriginal || detail.nameEn || '—',
-    originalTitle: detail.nameOriginal || detail.nameEn || detail.nameRu || '',
-    year: detail.year || null,
-    poster: detail.posterUrl || detail.posterUrlPreview || null,
-    genres,
-    runtime,
-    seasons,
-    episodes,
-    episodeRuntime: epRt,
-    ratingKp: detail.ratingKinopoisk || null,
-    ratingImdb: detail.ratingImdb || null,
-    overview: detail.shortDescription || detail.description || '',
-    lists,
+    type: entry.type,
+    title: entry.title,
+    originalTitle: entry.orig || entry.title,
+    year: entry.year,
+    poster: null,
+    genres: entry.genres.map((g) => GENRE_RU[g]).filter(Boolean),
+    runtime: entry.type === 'movie' ? entry.runtime : null,
+    seasons: null,
+    episodes: null,
+    episodeRuntime: null,
+    ratingKp: null,
+    ratingImdb: entry.rating,
+    ratingTmdb: null,
+    overview: '',
+    lists: [],
   };
+
+  try {
+    const found = await tmdb(
+      `/find/${entry.tconst}?external_source=imdb_id&language=ru-RU`
+    );
+    const hit = entry.type === 'movie' ? found.movie_results?.[0] : found.tv_results?.[0];
+    if (hit) {
+      item.tmdbId = hit.id;
+      item.title = (entry.type === 'tv' ? hit.name : hit.title) || item.title;
+      item.poster = hit.poster_path ? `${IMG}${hit.poster_path}` : null;
+      item.overview = hit.overview || '';
+      item.ratingTmdb = hit.vote_average || null;
+      const isAnime =
+        entry.genres.includes('Animation') && hit.original_language === 'ja';
+      if (isAnime) item.type = 'anime';
+
+      if (entry.type !== 'movie') {
+        const tv = await tmdb(`/tv/${hit.id}?language=ru-RU`);
+        item.seasons = tv.number_of_seasons || null;
+        item.episodes = tv.number_of_episodes || null;
+        item.episodeRuntime = tv.episode_run_time?.[0] || null;
+        item.runtime =
+          item.episodes && item.episodeRuntime
+            ? item.episodes * item.episodeRuntime
+            : null;
+      }
+    }
+  } catch (e) {
+    console.log('  TMDB fail', entry.tconst, e.message);
+  }
+  return item;
+}
+
+// Пул с ограниченной параллельностью для тысяч TMDB-запросов.
+async function mapPool(arr, limit, fn) {
+  const out = new Array(arr.length);
+  let i = 0;
+  let done = 0;
+  async function worker() {
+    while (i < arr.length) {
+      const idx = i++;
+      out[idx] = await fn(arr[idx]);
+      if (++done % 100 === 0) console.log(`  …${done}/${arr.length}`);
+      await sleep(25);
+    }
+  }
+  await Promise.all(Array.from({ length: limit }, worker));
+  return out;
 }
 
 async function main() {
-  const rawById = new Map(); // kinopoiskId → сырая карточка
-  const membership = new Map(); // kinopoiskId → Set(collectionId)
+  const ratings = await loadRatings();
+  const universe = await loadUniverse(ratings);
 
-  for (const col of COLLECTIONS) {
-    console.log(`Собираю: ${col.title}…`);
-    const raws = col.animeFilter
-      ? await collectAnime(col)
-      : await collectFromCollection(col);
-    for (const raw of raws) {
-      const id = raw.kinopoiskId;
-      if (!rawById.has(id)) rawById.set(id, raw);
-      if (!membership.has(id)) membership.set(id, new Set());
-      membership.get(id).add(col.id);
-    }
+  const movies = universe.filter((e) => e.type === 'movie').sort(byRating);
+  const series = universe.filter((e) => e.type === 'tv').sort(byRating);
+
+  // Членство: tconst → Set(listId)
+  const membership = new Map();
+  const add = (tconst, listId) => {
+    if (!membership.has(tconst)) membership.set(tconst, new Set());
+    membership.get(tconst).add(listId);
+  };
+
+  movies.slice(0, TOP_MOVIES).forEach((e) => add(e.tconst, 'top_movies'));
+  series.slice(0, TOP_SERIES).forEach((e) => add(e.tconst, 'top_series'));
+
+  // Топ по жанрам (фильмы + сериалы вместе).
+  for (const ruGenre of GENRE_ORDER) {
+    const enGenres = Object.keys(GENRE_RU).filter((en) => GENRE_RU[en] === ruGenre);
+    const pool = universe
+      .filter((e) => e.genres.some((g) => enGenres.includes(g)))
+      .sort(byRating)
+      .slice(0, PER_GENRE);
+    pool.forEach((e) => add(e.tconst, `genre_${ruGenre}`));
   }
 
-  console.log(`Уникальных тайтлов: ${rawById.size}. Обогащаю деталями…`);
-  const items = [];
-  let done = 0;
-  for (const [id, raw] of rawById) {
-    const item = await toItem(raw);
-    item.lists = [...new Set([...item.lists, ...membership.get(id)])];
-    items.push(item);
-    if (++done % 20 === 0) console.log(`  …${done}/${rawById.size}`);
+  // Кандидаты в аниме: японская анимация — берём широкий пул Animation,
+  // TMDB подтвердит original_language при обогащении.
+  universe
+    .filter((e) => e.genres.includes('Animation'))
+    .sort(byRating)
+    .slice(0, 300)
+    .forEach((e) => add(e.tconst, 'anime_candidate'));
+
+  const selected = universe.filter((e) => membership.has(e.tconst));
+  console.log(`Уникальных тайтлов к обогащению: ${selected.length}`);
+
+  const items = await mapPool(selected, 8, enrich);
+
+  // Финализируем списки: жанры-по-факту + коллекции; аниме собираем отдельно.
+  for (const item of items) {
+    const sets = membership.get(item.id);
+    const lists = new Set();
+    for (const l of sets) {
+      if (l === 'anime_candidate') continue;
+      lists.add(l);
+    }
+    // Жанры по фактическим genres тайтла (уже RU).
+    for (const g of item.genres) if (GENRE_ORDER.includes(g)) lists.add(`genre_${g}`);
+    if (item.type === 'anime' && sets.has('anime_candidate')) lists.add('anime_top');
+    item.lists = [...lists];
   }
 
   const catalog = {
     updatedAt: new Date().toISOString().slice(0, 10),
-    source: 'kinopoisk',
-    genres: GENRES,
-    collections: COLLECTIONS.map((c) => ({
-      id: c.id,
-      title: c.title,
-      kind: c.kind,
-    })),
+    source: 'imdb+tmdb',
+    genres: GENRE_ORDER,
+    collections: [
+      { id: 'top_movies', title: 'Топ фильмов', kind: 'movie' },
+      { id: 'top_series', title: 'Топ сериалов', kind: 'tv' },
+      { id: 'anime_top', title: 'Топ аниме', kind: 'anime' },
+    ],
     items,
   };
 
   const __dirname = dirname(fileURLToPath(import.meta.url));
-  const out = resolve(__dirname, '../public/data/catalog.json');
+  const out = pathResolve(__dirname, '../public/data/catalog.json');
   await mkdir(dirname(out), { recursive: true });
   await writeFile(out, JSON.stringify(catalog, null, 2), 'utf8');
   console.log(`Готово: ${items.length} тайтлов → ${out}`);

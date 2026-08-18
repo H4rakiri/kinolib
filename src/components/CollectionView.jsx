@@ -3,14 +3,14 @@ import MovieGrid from './MovieGrid.jsx';
 // Экран открытой подборки: назад, название, добавление фильмов, сетка.
 export default function CollectionView({
   col,
-  byId,
+  resolve,
   getStatus,
   onOpen,
   onBack,
   onAdd,
   onDelete,
 }) {
-  const items = col.itemIds.map((id) => byId.get(id)).filter(Boolean);
+  const items = col.itemIds.map((id) => resolve(id)).filter(Boolean);
 
   return (
     <div>

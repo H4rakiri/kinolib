@@ -329,6 +329,12 @@ h3 {
 .content > div > .search-input {
   margin-bottom: 18px;
 }
+.search-note {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  margin: -6px 2px 18px;
+}
 
 /* --- Библиотека --- */
 .lib-head {

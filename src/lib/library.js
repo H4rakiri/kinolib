@@ -2,15 +2,16 @@
 // и произвольные подборки (как плейлисты).
 //
 // Источник правды — JSON вида:
-//   { version, updatedAt, entries: { [id]: entry }, collections: [ {id,name,createdAt,itemIds[]} ] }
-// Сейчас хранится в localStorage; позже этот же JSON будет синхронизироваться
-// в приватный репозиторий на GitHub (Contents API, токен в localStorage) —
-// как сделано в ARISE. Экспорт/импорт даёт перенос между устройствами уже сейчас.
+//   { version, updatedAt, entries: { [id]: entry },
+//     collections: [ {id,name,createdAt,itemIds[]} ], items: { [id]: snapshot } }
+// items — снапшоты фильмов, добавленных из живого поиска (их нет в запечённом
+// каталоге), чтобы библиотека умела показывать даже нишевое кино.
+// Синхронизируется в приватный репозиторий GitHub. Экспорт/импорт — тоже.
 
 const KEY = 'kinolib.library.v1';
 
 export function emptyLibrary() {
-  return { version: 1, updatedAt: null, entries: {}, collections: [] };
+  return { version: 1, updatedAt: null, entries: {}, collections: [], items: {} };
 }
 
 // Приводим любую загруженную структуру к актуальной форме (миграция).
@@ -20,7 +21,17 @@ function normalize(data) {
     updatedAt: data.updatedAt || null,
     entries: data.entries || {},
     collections: Array.isArray(data.collections) ? data.collections : [],
+    items: data.items && typeof data.items === 'object' ? data.items : {},
   };
+}
+
+// Запомнить снапшот фильма (для тайтлов не из каталога). Хранит только лёгкие поля.
+function withSnapshot(lib, snapshot) {
+  if (!snapshot || !snapshot.id) return lib;
+  const { _partial, mediaType, ...clean } = snapshot;
+  void _partial;
+  void mediaType;
+  return { ...lib, items: { ...lib.items, [snapshot.id]: clean } };
 }
 
 export function loadLibrary() {
@@ -51,9 +62,10 @@ export function replaceLibrary(lib) {
 
 // --- Статусы ------------------------------------------------------------
 
-// Установить статус (или снять, если status === null).
-export function setStatus(lib, id, status) {
-  const next = { ...lib, entries: { ...lib.entries } };
+// Установить статус (или снять, если status === null). Если передан snapshot
+// (фильм не из каталога) — запоминаем его данные.
+export function setStatus(lib, id, status, snapshot) {
+  let next = { ...lib, entries: { ...lib.entries } };
   if (status === null) {
     delete next.entries[id];
   } else {
@@ -63,6 +75,7 @@ export function setStatus(lib, id, status) {
       status,
       addedAt: prev.addedAt || new Date().toISOString(),
     };
+    if (snapshot) next = withSnapshot(next, snapshot);
   }
   return saveLibrary(next);
 }
@@ -123,11 +136,14 @@ export function inCollection(lib, colId, itemId) {
   return !!col && col.itemIds.includes(itemId);
 }
 
-// Добавить/убрать тайтл из подборки (тумблер).
-export function toggleInCollection(lib, colId, itemId) {
+// Добавить/убрать тайтл из подборки (тумблер). При добавлении фильма не из
+// каталога передаём snapshot, чтобы запомнить его данные.
+export function toggleInCollection(lib, colId, itemId, snapshot) {
+  let adding = false;
   const collections = lib.collections.map((c) => {
     if (c.id !== colId) return c;
     const has = c.itemIds.includes(itemId);
+    adding = !has;
     return {
       ...c,
       itemIds: has
@@ -135,7 +151,14 @@ export function toggleInCollection(lib, colId, itemId) {
         : [...c.itemIds, itemId],
     };
   });
-  return saveLibrary({ ...lib, collections });
+  let next = { ...lib, collections };
+  if (adding && snapshot) next = withSnapshot(next, snapshot);
+  return saveLibrary(next);
+}
+
+// Снапшот тайтла, сохранённый в библиотеке (для фильмов не из каталога).
+export function getSnapshot(lib, id) {
+  return lib.items?.[id] || null;
 }
 
 // --- Экспорт / импорт ---------------------------------------------------

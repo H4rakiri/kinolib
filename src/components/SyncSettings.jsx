@@ -9,12 +9,22 @@ const STATUS_TEXT = {
   error: 'Ошибка',
 };
 
-// Настройка синхронизации библиотеки через приватный репозиторий GitHub.
-// Токен хранится только в этом браузере (localStorage).
-export default function SyncSettings({ cfg, status, msg, onSave, onSyncNow }) {
+// Настройки: синхронизация библиотеки (GitHub) и ключ поиска (TMDB).
+// Оба секрета хранятся только в этом браузере (localStorage).
+export default function SyncSettings({
+  cfg,
+  status,
+  msg,
+  onSave,
+  onSyncNow,
+  tmdbKey,
+  onSaveTmdbKey,
+}) {
   const [open, setOpen] = useState(false);
   const [repo, setRepo] = useState(cfg.repo || DEFAULT_REPO);
   const [token, setToken] = useState(cfg.token || '');
+  const [keyOpen, setKeyOpen] = useState(false);
+  const [tmdb, setTmdb] = useState(tmdbKey || '');
 
   const dotClass =
     status === 'idle'
@@ -79,6 +89,50 @@ export default function SyncSettings({ cfg, status, msg, onSave, onSyncNow }) {
             {cfg.token ? (
               <button className="ghost small" onClick={onSyncNow}>
                 Синхронизировать
+              </button>
+            ) : null}
+          </div>
+        </div>
+      )}
+
+      <button className="sync-bar" onClick={() => setKeyOpen((o) => !o)}>
+        <span className={`dot ${tmdbKey ? 'dot-ok' : 'dot-off'}`} />
+        <span className="sync-label">
+          Поиск по всей базе: {tmdbKey ? 'ключ TMDB задан' : 'ключ не задан'}
+        </span>
+        <span className="sync-caret">{keyOpen ? '▾' : '▸'}</span>
+      </button>
+
+      {keyOpen && (
+        <div className="sync-panel">
+          <label className="field">
+            <span>Ключ TMDB (API Key v3 auth)</span>
+            <input
+              className="search-input compact"
+              type="password"
+              value={tmdb}
+              onChange={(e) => setTmdb(e.target.value)}
+              placeholder="ключ с themoviedb.org"
+              autoCapitalize="off"
+              autoCorrect="off"
+              spellCheck={false}
+            />
+          </label>
+          <p className="sync-note">
+            Нужен для живого поиска по всей базе (нишевое кино). Хранится только в
+            этом браузере. Бесплатный ключ: themoviedb.org → Settings → API →
+            «API Key (v3 auth)».
+          </p>
+          <div className="sync-actions">
+            <button
+              className="mini-add solid"
+              onClick={() => onSaveTmdbKey(tmdb.trim())}
+            >
+              Сохранить ключ
+            </button>
+            {tmdbKey ? (
+              <button className="ghost small" onClick={() => { setTmdb(''); onSaveTmdbKey(''); }}>
+                Удалить
               </button>
             ) : null}
           </div>
