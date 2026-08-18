@@ -1,0 +1,147 @@
+{
+  "updatedAt": "2026-08-18",
+  "source": "demo",
+  "genres": [
+    "драма", "криминал", "боевик", "фантастика", "фэнтези",
+    "триллер", "комедия", "мелодрама", "приключения", "детектив",
+    "ужасы", "анимация", "меха", "сёнэн", "исэкай"
+  ],
+  "collections": [
+    { "id": "kp_top250", "title": "Топ-250 Кинопоиска", "kind": "movie" },
+    { "id": "imdb_top", "title": "Топ IMDB", "kind": "movie" },
+    { "id": "tv_popular", "title": "Популярные сериалы", "kind": "tv" },
+    { "id": "anime_top", "title": "Топ аниме", "kind": "anime" }
+  ],
+  "items": [
+    {
+      "id": "tt0111161", "kpId": 326, "tmdbId": 278, "type": "movie",
+      "title": "Побег из Шоушенка", "originalTitle": "The Shawshank Redemption", "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+      "genres": ["драма", "криминал"], "runtime": 142,
+      "seasons": null, "episodes": null, "episodeRuntime": null,
+      "ratingKp": 9.1, "ratingImdb": 9.3,
+      "overview": "Бухгалтер Энди Дюфрейн осуждён за убийство жены и её любовника и попадает в тюрьму Шоушенк.",
+      "lists": ["kp_top250", "imdb_top", "genre_драма", "genre_криминал"]
+    },
+    {
+      "id": "tt0068646", "kpId": 325, "tmdbId": 238, "type": "movie",
+      "title": "Крёстный отец", "originalTitle": "The Godfather", "year": 1972,
+      "poster": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+      "genres": ["драма", "криминал"], "runtime": 175,
+      "seasons": null, "episodes": null, "episodeRuntime": null,
+      "ratingKp": 8.7, "ratingImdb": 9.2,
+      "overview": "Стареющий глава мафиозного клана Корлеоне передаёт дела своему младшему сыну Майклу.",
+      "lists": ["kp_top250", "imdb_top", "genre_драма", "genre_криминал"]
+    },
+    {
+      "id": "tt1375666", "kpId": 447301, "tmdbId": 27205, "type": "movie",
+      "title": "Начало", "originalTitle": "Inception", "year": 2010,
+      "poster": "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+      "genres": ["фантастика", "боевик", "триллер"], "runtime": 148,
+      "seasons": null, "episodes": null, "episodeRuntime": null,
+      "ratingKp": 8.7, "ratingImdb": 8.8,
+      "overview": "Дом Кобб — вор с редким умением проникать в сны людей и красть их секреты.",
+      "lists": ["kp_top250", "imdb_top", "genre_фантастика", "genre_боевик", "genre_триллер"]
+    },
+    {
+      "id": "tt0816692", "kpId": 258687, "tmdbId": 157336, "type": "movie",
+      "title": "Интерстеллар", "originalTitle": "Interstellar", "year": 2014,
+      "poster": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+      "genres": ["фантастика", "драма", "приключения"], "runtime": 169,
+      "seasons": null, "episodes": null, "episodeRuntime": null,
+      "ratingKp": 8.6, "ratingImdb": 8.7,
+      "overview": "Когда Земля становится непригодной для жизни, группа исследователей отправляется сквозь червоточину.",
+      "lists": ["kp_top250", "imdb_top", "genre_фантастика", "genre_драма", "genre_приключения"]
+    },
+    {
+      "id": "tt0468569", "kpId": 111543, "tmdbId": 155, "type": "movie",
+      "title": "Тёмный рыцарь", "originalTitle": "The Dark Knight", "year": 2008,
+      "poster": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+      "genres": ["боевик", "криминал", "триллер"], "runtime": 152,
+      "seasons": null, "episodes": null, "episodeRuntime": null,
+      "ratingKp": 8.5, "ratingImdb": 9.0,
+      "overview": "Бэтмен противостоит новому хаосу, который несёт Готэму Джокер.",
+      "lists": ["kp_top250", "imdb_top", "genre_боевик", "genre_криминал", "genre_триллер"]
+    },
+    {
+      "id": "tt4574334", "kpId": 843791, "tmdbId": 66732, "type": "tv",
+      "title": "Очень странные дела", "originalTitle": "Stranger Things", "year": 2016,
+      "poster": "https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg",
+      "genres": ["фантастика", "драма", "ужасы"], "runtime": 1750,
+      "seasons": 4, "episodes": 34, "episodeRuntime": 51,
+      "ratingKp": 8.0, "ratingImdb": 8.7,
+      "overview": "В маленьком городке Хоукинс пропадает мальчик, а на свет выходят сверхъестественные тайны.",
+      "lists": ["tv_popular", "genre_фантастика", "genre_драма", "genre_ужасы"]
+    },
+    {
+      "id": "tt0903747", "kpId": 404900, "tmdbId": 1396, "type": "tv",
+      "title": "Во все тяжкие", "originalTitle": "Breaking Bad", "year": 2008,
+      "poster": "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+      "genres": ["драма", "криминал", "триллер"], "runtime": 2820,
+      "seasons": 5, "episodes": 62, "episodeRuntime": 47,
+      "ratingKp": 8.9, "ratingImdb": 9.5,
+      "overview": "Школьный учитель химии узнаёт о смертельной болезни и начинает варить метамфетамин.",
+      "lists": ["tv_popular", "genre_драма", "genre_криминал", "genre_триллер"]
+    },
+    {
+      "id": "tt0944947", "kpId": 464963, "tmdbId": 1399, "type": "tv",
+      "title": "Игра престолов", "originalTitle": "Game of Thrones", "year": 2011,
+      "poster": "https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg",
+      "genres": ["фэнтези", "драма", "приключения"], "runtime": 4260,
+      "seasons": 8, "episodes": 73, "episodeRuntime": 58,
+      "ratingKp": 8.9, "ratingImdb": 9.2,
+      "overview": "Знатные семьи ведут борьбу за Железный трон Семи Королевств Вестероса.",
+      "lists": ["tv_popular", "genre_фэнтези", "genre_драма", "genre_приключения"]
+    },
+    {
+      "id": "tt0388629", "kpId": 235469, "tmdbId": 37854, "type": "anime",
+      "title": "Ван-Пис", "originalTitle": "One Piece", "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/w500/e3NBGiFtSpFa4a0Yh4loLNQjEW8.jpg",
+      "genres": ["анимация", "приключения", "сёнэн", "фэнтези"], "runtime": 25600,
+      "seasons": 21, "episodes": 1100, "episodeRuntime": 24,
+      "ratingKp": 8.6, "ratingImdb": 8.9,
+      "overview": "Юный пират Монки Д. Луффи мечтает найти легендарное сокровище Ван-Пис и стать королём пиратов.",
+      "lists": ["anime_top", "genre_анимация", "genre_приключения", "genre_сёнэн", "genre_фэнтези"]
+    },
+    {
+      "id": "tt2560140", "kpId": 404900002, "tmdbId": 1429, "type": "anime",
+      "title": "Атака титанов", "originalTitle": "Shingeki no Kyojin", "year": 2013,
+      "poster": "https://image.tmdb.org/t/p/w500/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg",
+      "genres": ["анимация", "боевик", "драма", "сёнэн"], "runtime": 1750,
+      "seasons": 4, "episodes": 88, "episodeRuntime": 24,
+      "ratingKp": 8.4, "ratingImdb": 9.1,
+      "overview": "Человечество прячется за гигантскими стенами от титанов, пожирающих людей.",
+      "lists": ["anime_top", "genre_анимация", "genre_боевик", "genre_драма", "genre_сёнэн"]
+    },
+    {
+      "id": "tt9335498", "kpId": 1219177, "tmdbId": 85937, "type": "anime",
+      "title": "Клинок, рассекающий демонов", "originalTitle": "Kimetsu no Yaiba", "year": 2019,
+      "poster": "https://image.tmdb.org/t/p/w500/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg",
+      "genres": ["анимация", "боевик", "фэнтези", "сёнэн"], "runtime": 1500,
+      "seasons": 4, "episodes": 55, "episodeRuntime": 24,
+      "ratingKp": 8.2, "ratingImdb": 8.6,
+      "overview": "Танджиро становится охотником на демонов, чтобы вернуть сестру в человеческий облик.",
+      "lists": ["anime_top", "genre_анимация", "genre_боевик", "genre_фэнтези", "genre_сёнэн"]
+    },
+    {
+      "id": "tt0110912", "kpId": 342, "tmdbId": 680, "type": "movie",
+      "title": "Криминальное чтиво", "originalTitle": "Pulp Fiction", "year": 1994,
+      "poster": "https://image.tmdb.org/t/p/w500/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+      "genres": ["криминал", "драма"], "runtime": 154,
+      "seasons": null, "episodes": null, "episodeRuntime": null,
+      "ratingKp": 8.6, "ratingImdb": 8.9,
+      "overview": "Несколько историй из жизни бандитов Лос-Анджелеса переплетаются в неожиданном порядке.",
+      "lists": ["kp_top250", "imdb_top", "genre_криминал", "genre_драма"]
+    },
+    {
+      "id": "tt0137523", "kpId": 361, "tmdbId": 550, "type": "movie",
+      "title": "Бойцовский клуб", "originalTitle": "Fight Club", "year": 1999,
+      "poster": "https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+      "genres": ["драма", "триллер"], "runtime": 139,
+      "seasons": null, "episodes": null, "episodeRuntime": null,
+      "ratingKp": 8.6, "ratingImdb": 8.8,
+      "overview": "Страдающий бессонницей клерк знакомится с харизматичным Тайлером Дёрденом.",
+      "lists": ["kp_top250", "imdb_top", "genre_драма", "genre_триллер"]
+    }
+  ]
+}
