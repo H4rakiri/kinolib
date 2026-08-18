@@ -1,147 +1,6375 @@
 {
   "updatedAt": "2026-08-18",
-  "source": "demo",
+  "source": "kinopoisk",
   "genres": [
-    "драма", "криминал", "боевик", "фантастика", "фэнтези",
-    "триллер", "комедия", "мелодрама", "приключения", "детектив",
-    "ужасы", "анимация", "меха", "сёнэн", "исэкай"
+    "драма",
+    "комедия",
+    "боевик",
+    "триллер",
+    "фантастика",
+    "фэнтези",
+    "приключения",
+    "криминал",
+    "детектив",
+    "мелодрама",
+    "ужасы",
+    "аниме",
+    "мультфильм",
+    "военный",
+    "история"
   ],
   "collections": [
-    { "id": "kp_top250", "title": "Топ-250 Кинопоиска", "kind": "movie" },
-    { "id": "imdb_top", "title": "Топ IMDB", "kind": "movie" },
-    { "id": "tv_popular", "title": "Популярные сериалы", "kind": "tv" },
-    { "id": "anime_top", "title": "Топ аниме", "kind": "anime" }
+    {
+      "id": "kp_top250",
+      "title": "Топ Кинопоиска",
+      "kind": "movie"
+    },
+    {
+      "id": "popular",
+      "title": "Популярное",
+      "kind": "movie"
+    },
+    {
+      "id": "series",
+      "title": "Сериалы",
+      "kind": "tv"
+    },
+    {
+      "id": "anime_top",
+      "title": "Топ аниме",
+      "kind": "anime"
+    }
   ],
   "items": [
     {
-      "id": "tt0111161", "kpId": 326, "tmdbId": 278, "type": "movie",
-      "title": "Побег из Шоушенка", "originalTitle": "The Shawshank Redemption", "year": 1994,
-      "poster": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
-      "genres": ["драма", "криминал"], "runtime": 142,
-      "seasons": null, "episodes": null, "episodeRuntime": null,
-      "ratingKp": 9.1, "ratingImdb": 9.3,
-      "overview": "Бухгалтер Энди Дюфрейн осуждён за убийство жены и её любовника и попадает в тюрьму Шоушенк.",
-      "lists": ["kp_top250", "imdb_top", "genre_драма", "genre_криминал"]
+      "id": "tt0816692",
+      "kpId": 258687,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Интерстеллар",
+      "originalTitle": "Interstellar",
+      "year": 2014,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/258687.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "приключения"
+      ],
+      "runtime": 169,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.7,
+      "overview": "Отец летит к звёздам ради будущего детей — и всего человечества. Космическая одиссея Кристофера Нолана",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_приключения",
+        "kp_top250",
+        "popular"
+      ]
     },
     {
-      "id": "tt0068646", "kpId": 325, "tmdbId": 238, "type": "movie",
-      "title": "Крёстный отец", "originalTitle": "The Godfather", "year": 1972,
-      "poster": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
-      "genres": ["драма", "криминал"], "runtime": 175,
-      "seasons": null, "episodes": null, "episodeRuntime": null,
-      "ratingKp": 8.7, "ratingImdb": 9.2,
-      "overview": "Стареющий глава мафиозного клана Корлеоне передаёт дела своему младшему сыну Майклу.",
-      "lists": ["kp_top250", "imdb_top", "genre_драма", "genre_криминал"]
+      "id": "tt0111161",
+      "kpId": 326,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Побег из Шоушенка",
+      "originalTitle": "The Shawshank Redemption",
+      "year": 1994,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/326.jpg",
+      "genres": [
+        "драма"
+      ],
+      "runtime": 142,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 9.1,
+      "ratingImdb": 9.3,
+      "overview": "Несправедливо осужденный банкир готовит побег из тюрьмы. Тим Роббинс в выдающейся экранизации Стивена Кинга",
+      "lists": [
+        "genre_драма",
+        "kp_top250"
+      ]
     },
     {
-      "id": "tt1375666", "kpId": 447301, "tmdbId": 27205, "type": "movie",
-      "title": "Начало", "originalTitle": "Inception", "year": 2010,
-      "poster": "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
-      "genres": ["фантастика", "боевик", "триллер"], "runtime": 148,
-      "seasons": null, "episodes": null, "episodeRuntime": null,
-      "ratingKp": 8.7, "ratingImdb": 8.8,
-      "overview": "Дом Кобб — вор с редким умением проникать в сны людей и красть их секреты.",
-      "lists": ["kp_top250", "imdb_top", "genre_фантастика", "genre_боевик", "genre_триллер"]
+      "id": "tt0120689",
+      "kpId": 435,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Зеленая миля",
+      "originalTitle": "The Green Mile",
+      "year": 1999,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/435.jpg",
+      "genres": [
+        "драма",
+        "криминал",
+        "фэнтези"
+      ],
+      "runtime": 189,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 9.1,
+      "ratingImdb": 8.6,
+      "overview": "В тюрьме для смертников появляется заключенный с божественным даром. Мистическая драма по роману Стивена Кинга",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "genre_фэнтези",
+        "kp_top250"
+      ]
     },
     {
-      "id": "tt0816692", "kpId": 258687, "tmdbId": 157336, "type": "movie",
-      "title": "Интерстеллар", "originalTitle": "Interstellar", "year": 2014,
-      "poster": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
-      "genres": ["фантастика", "драма", "приключения"], "runtime": 169,
-      "seasons": null, "episodes": null, "episodeRuntime": null,
-      "ratingKp": 8.6, "ratingImdb": 8.7,
-      "overview": "Когда Земля становится непригодной для жизни, группа исследователей отправляется сквозь червоточину.",
-      "lists": ["kp_top250", "imdb_top", "genre_фантастика", "genre_драма", "genre_приключения"]
+      "id": "tt8367814",
+      "kpId": 1143242,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Джентльмены",
+      "originalTitle": "The Gentlemen",
+      "year": 2019,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1143242.jpg",
+      "genres": [
+        "криминал",
+        "боевик",
+        "комедия"
+      ],
+      "runtime": 113,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 7.8,
+      "overview": "Гангстеры всех мастей делят нелегальный бизнес. Закрученная экшен-комедия Гая Ричи с Мэттью Макконахи",
+      "lists": [
+        "genre_криминал",
+        "genre_боевик",
+        "genre_комедия",
+        "kp_top250",
+        "popular"
+      ]
     },
     {
-      "id": "tt0468569", "kpId": 111543, "tmdbId": 155, "type": "movie",
-      "title": "Тёмный рыцарь", "originalTitle": "The Dark Knight", "year": 2008,
-      "poster": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
-      "genres": ["боевик", "криминал", "триллер"], "runtime": 152,
-      "seasons": null, "episodes": null, "episodeRuntime": null,
-      "ratingKp": 8.5, "ratingImdb": 9.0,
-      "overview": "Бэтмен противостоит новому хаосу, который несёт Готэму Джокер.",
-      "lists": ["kp_top250", "imdb_top", "genre_боевик", "genre_криминал", "genre_триллер"]
+      "id": "tt0167260",
+      "kpId": 3498,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Властелин колец: Возвращение короля",
+      "originalTitle": "The Lord of the Rings: The Return of the King",
+      "year": 2003,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/3498.jpg",
+      "genres": [
+        "драма",
+        "приключения",
+        "боевик",
+        "фэнтези"
+      ],
+      "runtime": 201,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 9,
+      "overview": "Арагорн штурмует Мордор, а Фродо устал бороться с чарами кольца. Эффектный финал саги, собравший 11 «Оскаров»",
+      "lists": [
+        "genre_драма",
+        "genre_приключения",
+        "genre_боевик",
+        "genre_фэнтези",
+        "kp_top250"
+      ]
     },
     {
-      "id": "tt4574334", "kpId": 843791, "tmdbId": 66732, "type": "tv",
-      "title": "Очень странные дела", "originalTitle": "Stranger Things", "year": 2016,
-      "poster": "https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg",
-      "genres": ["фантастика", "драма", "ужасы"], "runtime": 1750,
-      "seasons": 4, "episodes": 34, "episodeRuntime": 51,
-      "ratingKp": 8.0, "ratingImdb": 8.7,
-      "overview": "В маленьком городке Хоукинс пропадает мальчик, а на свет выходят сверхъестественные тайны.",
-      "lists": ["tv_popular", "genre_фантастика", "genre_драма", "genre_ужасы"]
+      "id": "kp397667",
+      "kpId": 397667,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Остров проклятых",
+      "originalTitle": "Shutter Island",
+      "year": 2009,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/397667.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "детектив"
+      ],
+      "runtime": 138,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.2,
+      "overview": "Двое приставов расследуют побег пациентки из мрачной психбольницы. Параноидальный триллер с Леонардо ДиКаприо",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_детектив",
+        "kp_top250"
+      ]
     },
     {
-      "id": "tt0903747", "kpId": 404900, "tmdbId": 1396, "type": "tv",
-      "title": "Во все тяжкие", "originalTitle": "Breaking Bad", "year": 2008,
-      "poster": "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
-      "genres": ["драма", "криминал", "триллер"], "runtime": 2820,
-      "seasons": 5, "episodes": 62, "episodeRuntime": 47,
-      "ratingKp": 8.9, "ratingImdb": 9.5,
-      "overview": "Школьный учитель химии узнаёт о смертельной болезни и начинает варить метамфетамин.",
-      "lists": ["tv_popular", "genre_драма", "genre_криминал", "genre_триллер"]
+      "id": "tt0137523",
+      "kpId": 361,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Бойцовский клуб",
+      "originalTitle": "Fight Club",
+      "year": 1999,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/361.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал"
+      ],
+      "runtime": 139,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.8,
+      "overview": "Бессонница, драки и мыло. Контркультурный шедевр Дэвида Финчера, который можно пересматривать бесконечно",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "kp_top250"
+      ]
     },
     {
-      "id": "tt0944947", "kpId": 464963, "tmdbId": 1399, "type": "tv",
-      "title": "Игра престолов", "originalTitle": "Game of Thrones", "year": 2011,
-      "poster": "https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg",
-      "genres": ["фэнтези", "драма", "приключения"], "runtime": 4260,
-      "seasons": 8, "episodes": 73, "episodeRuntime": 58,
-      "ratingKp": 8.9, "ratingImdb": 9.2,
-      "overview": "Знатные семьи ведут борьбу за Железный трон Семи Королевств Вестероса.",
-      "lists": ["tv_popular", "genre_фэнтези", "genre_драма", "genre_приключения"]
+      "id": "tt0120737",
+      "kpId": 328,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Властелин колец: Братство кольца",
+      "originalTitle": "The Lord of the Rings: The Fellowship of the Ring",
+      "year": 2001,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/328.jpg",
+      "genres": [
+        "драма",
+        "приключения",
+        "боевик",
+        "фэнтези"
+      ],
+      "runtime": 178,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.9,
+      "overview": "Фродо Бэггинс отправляется спасать Средиземье. Первая часть культовой фэнтези-трилогии Питера Джексона",
+      "lists": [
+        "genre_драма",
+        "genre_приключения",
+        "genre_боевик",
+        "genre_фэнтези",
+        "kp_top250"
+      ]
     },
     {
-      "id": "tt0388629", "kpId": 235469, "tmdbId": 37854, "type": "anime",
-      "title": "Ван-Пис", "originalTitle": "One Piece", "year": 1999,
-      "poster": "https://image.tmdb.org/t/p/w500/e3NBGiFtSpFa4a0Yh4loLNQjEW8.jpg",
-      "genres": ["анимация", "приключения", "сёнэн", "фэнтези"], "runtime": 25600,
-      "seasons": 21, "episodes": 1100, "episodeRuntime": 24,
-      "ratingKp": 8.6, "ratingImdb": 8.9,
-      "overview": "Юный пират Монки Д. Луффи мечтает найти легендарное сокровище Ван-Пис и стать королём пиратов.",
-      "lists": ["anime_top", "genre_анимация", "genre_приключения", "genre_сёнэн", "genre_фэнтези"]
+      "id": "tt1675434",
+      "kpId": 535341,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "1+1",
+      "originalTitle": "Intouchables",
+      "year": 2011,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/535341.jpg",
+      "genres": [
+        "драма",
+        "комедия"
+      ],
+      "runtime": 112,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.9,
+      "ratingImdb": 8.5,
+      "overview": "Аристократ на коляске нанимает в сиделки бывшего заключенного. Искрометная французская комедия с Омаром Си",
+      "lists": [
+        "genre_драма",
+        "genre_комедия",
+        "kp_top250"
+      ]
     },
     {
-      "id": "tt2560140", "kpId": 404900002, "tmdbId": 1429, "type": "anime",
-      "title": "Атака титанов", "originalTitle": "Shingeki no Kyojin", "year": 2013,
-      "poster": "https://image.tmdb.org/t/p/w500/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg",
-      "genres": ["анимация", "боевик", "драма", "сёнэн"], "runtime": 1750,
-      "seasons": 4, "episodes": 88, "episodeRuntime": 24,
-      "ratingKp": 8.4, "ratingImdb": 9.1,
-      "overview": "Человечество прячется за гигантскими стенами от титанов, пожирающих людей.",
-      "lists": ["anime_top", "genre_анимация", "genre_боевик", "genre_драма", "genre_сёнэн"]
+      "id": "tt0109830",
+      "kpId": 448,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Форрест Гамп",
+      "originalTitle": "Forrest Gump",
+      "year": 1994,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/448.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "комедия",
+        "военный",
+        "история"
+      ],
+      "runtime": 142,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.9,
+      "ratingImdb": 8.8,
+      "overview": "Полувековая история США глазами чудака из Алабамы. Абсолютная классика Роберта Земекиса с Томом Хэнксом",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "genre_комедия",
+        "genre_военный",
+        "genre_история",
+        "kp_top250"
+      ]
     },
     {
-      "id": "tt9335498", "kpId": 1219177, "tmdbId": 85937, "type": "anime",
-      "title": "Клинок, рассекающий демонов", "originalTitle": "Kimetsu no Yaiba", "year": 2019,
-      "poster": "https://image.tmdb.org/t/p/w500/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg",
-      "genres": ["анимация", "боевик", "фэнтези", "сёнэн"], "runtime": 1500,
-      "seasons": 4, "episodes": 55, "episodeRuntime": 24,
-      "ratingKp": 8.2, "ratingImdb": 8.6,
-      "overview": "Танджиро становится охотником на демонов, чтобы вернуть сестру в человеческий облик.",
-      "lists": ["anime_top", "genre_анимация", "genre_боевик", "genre_фэнтези", "genre_сёнэн"]
+      "id": "tt0167261",
+      "kpId": 312,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Властелин колец: Две крепости",
+      "originalTitle": "The Lord of the Rings: The Two Towers",
+      "year": 2002,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/312.jpg",
+      "genres": [
+        "драма",
+        "приключения",
+        "боевик",
+        "фэнтези"
+      ],
+      "runtime": 179,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.8,
+      "overview": "Голлум ведет хоббитов в Мордор, а великие армии готовятся к битве. Вторая часть трилогии, два «Оскара»",
+      "lists": [
+        "genre_драма",
+        "genre_приключения",
+        "genre_боевик",
+        "genre_фэнтези",
+        "kp_top250"
+      ]
     },
     {
-      "id": "tt0110912", "kpId": 342, "tmdbId": 680, "type": "movie",
-      "title": "Криминальное чтиво", "originalTitle": "Pulp Fiction", "year": 1994,
-      "poster": "https://image.tmdb.org/t/p/w500/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
-      "genres": ["криминал", "драма"], "runtime": 154,
-      "seasons": null, "episodes": null, "episodeRuntime": null,
-      "ratingKp": 8.6, "ratingImdb": 8.9,
-      "overview": "Несколько историй из жизни бандитов Лос-Анджелеса переплетаются в неожиданном порядке.",
-      "lists": ["kp_top250", "imdb_top", "genre_криминал", "genre_драма"]
+      "id": "tt0103064",
+      "kpId": 444,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Терминатор 2: Судный день",
+      "originalTitle": "Terminator 2: Judgment Day",
+      "year": 1991,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/444.jpg",
+      "genres": [
+        "триллер",
+        "фантастика",
+        "боевик"
+      ],
+      "runtime": 137,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.6,
+      "overview": "Жидкий киборг, ядерный апокалипсис и культовое «Hasta la vista, baby». Бессмертный шедевр Джеймса Кэмерона",
+      "lists": [
+        "genre_триллер",
+        "genre_фантастика",
+        "genre_боевик",
+        "kp_top250"
+      ]
     },
     {
-      "id": "tt0137523", "kpId": 361, "tmdbId": 550, "type": "movie",
-      "title": "Бойцовский клуб", "originalTitle": "Fight Club", "year": 1999,
-      "poster": "https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
-      "genres": ["драма", "триллер"], "runtime": 139,
-      "seasons": null, "episodes": null, "episodeRuntime": null,
-      "ratingKp": 8.6, "ratingImdb": 8.8,
-      "overview": "Страдающий бессонницей клерк знакомится с харизматичным Тайлером Дёрденом.",
-      "lists": ["kp_top250", "imdb_top", "genre_драма", "genre_триллер"]
+      "id": "tt1375666",
+      "kpId": 447301,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Начало",
+      "originalTitle": "Inception",
+      "year": 2010,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/447301.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "детектив",
+        "фантастика",
+        "боевик"
+      ],
+      "runtime": 148,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.8,
+      "overview": "Профессиональные воры внедряются в сон наследника огромной империи. Фантастический боевик Кристофера Нолана",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_детектив",
+        "genre_фантастика",
+        "genre_боевик",
+        "kp_top250",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt0031381",
+      "kpId": 456,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Унесённые ветром",
+      "originalTitle": "Gone with the Wind",
+      "year": 1939,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/456.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "военный",
+        "история"
+      ],
+      "runtime": 222,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.2,
+      "overview": "Интриги, убийство, любовь — на фоне Гражданской войны в США. 8 «Оскаров»",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "genre_военный",
+        "genre_история",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0245429",
+      "kpId": 370,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Унесённые призраками",
+      "originalTitle": "Sen to Chihiro no kamikakushi",
+      "year": 2001,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/370.jpg",
+      "genres": [
+        "приключения",
+        "фэнтези",
+        "мультфильм",
+        "семейный",
+        "аниме"
+      ],
+      "runtime": 124,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.6,
+      "overview": "Девочка должна спасти своих родителей в мире духов. Шедевр Хаяо Миядзаки, фаворит анимационных рейтингов мира",
+      "lists": [
+        "genre_приключения",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "kp_top250",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0110912",
+      "kpId": 342,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Криминальное чтиво",
+      "originalTitle": "Pulp Fiction",
+      "year": 1994,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/342.jpg",
+      "genres": [
+        "драма",
+        "криминал"
+      ],
+      "runtime": 154,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.8,
+      "overview": "Несколько связанных историй из жизни бандитов. Шедевр Квентина Тарантино, который изменил мировое кино",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "kp111543",
+      "kpId": 111543,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Темный рыцарь",
+      "originalTitle": "The Dark Knight",
+      "year": 2008,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/111543.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал",
+        "фантастика",
+        "боевик"
+      ],
+      "runtime": 152,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 9.1,
+      "overview": "«Чё ты такой серьёзный?» Супергеройский блокбастер Кристофера Нолана, который изменил законы жанра",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "genre_фантастика",
+        "genre_боевик",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0172495",
+      "kpId": 474,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Гладиатор",
+      "originalTitle": "Gladiator",
+      "year": 2000,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/474.jpg",
+      "genres": [
+        "драма",
+        "боевик",
+        "история"
+      ],
+      "runtime": 155,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.5,
+      "overview": "Отважный генерал, ставший рабом, мстит империи. Культовая историческая драма Ридли Скотта с пятью «Оскарами»",
+      "lists": [
+        "genre_драма",
+        "genre_боевик",
+        "genre_история",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "kp44168",
+      "kpId": 44168,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Девчата",
+      "originalTitle": "Девчата",
+      "year": 1961,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/44168.jpg",
+      "genres": [
+        "мелодрама",
+        "комедия"
+      ],
+      "runtime": 92,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 7.8,
+      "overview": "Юная повариха привносит жизни в маленький сибирский поселок. Фильм-эпоха, воспитавший не одно поколение",
+      "lists": [
+        "genre_мелодрама",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0993846",
+      "kpId": 462682,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Волк с Уолл-стрит",
+      "originalTitle": "The Wolf of Wall Street",
+      "year": 2013,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/462682.jpg",
+      "genres": [
+        "драма",
+        "криминал",
+        "биография",
+        "комедия"
+      ],
+      "runtime": 180,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 8.2,
+      "overview": "Восхождение циника-гедониста на бизнес-олимп 1980-х. Блистательный тандем Леонардо ДиКаприо и Мартина Скорсезе",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0108052",
+      "kpId": 329,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Список Шиндлера",
+      "originalTitle": "Schindler's List",
+      "year": 1993,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/329.jpg",
+      "genres": [
+        "драма",
+        "биография",
+        "военный",
+        "история"
+      ],
+      "runtime": 195,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.9,
+      "ratingImdb": 9,
+      "overview": "История немецкого промышленника, спасшего тысячи жизней во время Холокоста. Драма Стивена Спилберга",
+      "lists": [
+        "genre_драма",
+        "genre_военный",
+        "genre_история",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0059550",
+      "kpId": 42782,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Операция «Ы» и другие приключения Шурика",
+      "originalTitle": "Операция «Ы» и другие приключения Шурика",
+      "year": 1965,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/42782.jpg",
+      "genres": [
+        "криминал",
+        "мелодрама",
+        "комедия"
+      ],
+      "runtime": 95,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.4,
+      "overview": "Похождения хронически оптимистичного очкарика. Блистательная комедия Леонида Гайдая",
+      "lists": [
+        "genre_криминал",
+        "genre_мелодрама",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0068646",
+      "kpId": 325,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Крестный отец",
+      "originalTitle": "The Godfather",
+      "year": 1972,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/325.jpg",
+      "genres": [
+        "драма",
+        "криминал"
+      ],
+      "runtime": 175,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 9.2,
+      "overview": "В семье крупного нью-йоркского мафиози наметился кризис. Революция в гангстерском кино и начало большого эпоса",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0118767",
+      "kpId": 41519,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Брат",
+      "originalTitle": "Брат",
+      "year": 1997,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/41519.jpg",
+      "genres": [
+        "драма",
+        "криминал",
+        "боевик"
+      ],
+      "runtime": 96,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 7.8,
+      "overview": "Дембель Данила Багров защищает слабых в Петербурге 1990-х. Фильм, сделавший Сергея Бодрова народным героем",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "genre_боевик",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt2380307",
+      "kpId": 679486,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Тайна Коко",
+      "originalTitle": "Coco",
+      "year": 2017,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/679486.jpg",
+      "genres": [
+        "приключения",
+        "фэнтези",
+        "комедия",
+        "музыка",
+        "мультфильм",
+        "семейный"
+      ],
+      "runtime": 105,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.4,
+      "overview": "Юный музыкант Мигель попадает в мир мертвых. Трогательная история о любви без границ, получившая два «Оскара»",
+      "lists": [
+        "genre_приключения",
+        "genre_фэнтези",
+        "genre_комедия",
+        "genre_мультфильм",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt6966692",
+      "kpId": 1108577,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Зеленая книга",
+      "originalTitle": "Green Book",
+      "year": 2018,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1108577.jpg",
+      "genres": [
+        "драма",
+        "биография",
+        "комедия"
+      ],
+      "runtime": 130,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.2,
+      "overview": "Путешествие итальянца-вышибалы и чернокожего пианиста по Америке 1960-х. «Оскар» за лучший фильм",
+      "lists": [
+        "genre_драма",
+        "genre_комедия",
+        "kp_top250",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt4492666",
+      "kpId": 567118,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Деревья на асфальте",
+      "originalTitle": "Деревья на асфальте",
+      "year": 1984,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/567118.jpg",
+      "genres": [
+        "драма"
+      ],
+      "runtime": 74,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": null,
+      "overview": "Пожилая мать решает переехать из родной деревни в город к сыну. Эмоциональная драма с Галиной Макаровой",
+      "lists": [
+        "genre_драма",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0088763",
+      "kpId": 476,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Назад в будущее",
+      "originalTitle": "Back to the Future",
+      "year": 1985,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/476.jpg",
+      "genres": [
+        "фантастика",
+        "приключения",
+        "комедия"
+      ],
+      "runtime": 116,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.5,
+      "overview": "Безумный ученый и 17-летний оболтус тестируют машину времени, наводя шороху в 1950-х. Классика кинофантастики",
+      "lists": [
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0096126",
+      "kpId": 77335,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Собачье сердце",
+      "originalTitle": "Собачье сердце",
+      "year": 1988,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/77335.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "комедия"
+      ],
+      "runtime": 136,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.5,
+      "overview": "Профессор Преображенский превращает уличного пса в человека. Выдающаяся экранизация повести Михаила Булгакова",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0126029",
+      "kpId": 430,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Шрэк",
+      "originalTitle": "Shrek",
+      "year": 2001,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/430.jpg",
+      "genres": [
+        "мелодрама",
+        "приключения",
+        "фэнтези",
+        "комедия",
+        "мультфильм",
+        "семейный"
+      ],
+      "runtime": 90,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 7.9,
+      "overview": "Огр-мизантроп спасает принцессу, чтобы вернуть свое болото. Революционная анимация о том, что красота — внутри",
+      "lists": [
+        "genre_мелодрама",
+        "genre_приключения",
+        "genre_фэнтези",
+        "genre_комедия",
+        "genre_мультфильм",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0208092",
+      "kpId": 526,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Большой куш",
+      "originalTitle": "Snatch",
+      "year": 2000,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/526.jpg",
+      "genres": [
+        "криминал",
+        "боевик",
+        "комедия"
+      ],
+      "runtime": 104,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.2,
+      "overview": "На охоту за крупным алмазом выходят цыгане, евреи и местные головорезы. Криминальная Англия глазами Гая Ричи",
+      "lists": [
+        "genre_криминал",
+        "genre_боевик",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0238883",
+      "kpId": 41520,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Брат 2",
+      "originalTitle": "Брат 2",
+      "year": 2000,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/41520.jpg",
+      "genres": [
+        "криминал",
+        "боевик"
+      ],
+      "runtime": 127,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 7.6,
+      "overview": "Американцы знакомятся с Данилой Багровым и узнают, в чём сила. Сиквел о герое времени с мощным рок-саундтреком",
+      "lists": [
+        "genre_криминал",
+        "genre_боевик",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0264464",
+      "kpId": 324,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Поймай меня, если сможешь",
+      "originalTitle": "Catch Me If You Can",
+      "year": 2002,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/324.jpg",
+      "genres": [
+        "криминал",
+        "биография",
+        "комедия"
+      ],
+      "runtime": 141,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.1,
+      "overview": "Виртуозный аферист годами водит за нос ФБР. Хит Стивена Спилберга по реальным событиям с Леонардо ДиКаприо",
+      "lists": [
+        "genre_криминал",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0133093",
+      "kpId": 301,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Матрица",
+      "originalTitle": "The Matrix",
+      "year": 1999,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/301.jpg",
+      "genres": [
+        "фантастика",
+        "боевик"
+      ],
+      "runtime": 136,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.7,
+      "overview": "Хакер Нео узнает, что его мир — виртуальный. Выдающийся экшен, доказавший, что зрелищное кино может быть умным",
+      "lists": [
+        "genre_фантастика",
+        "genre_боевик",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "kp8472578",
+      "kpId": 8472578,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Я ругаюсь",
+      "originalTitle": "I Swear",
+      "year": 2025,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/8472578.jpg",
+      "genres": [
+        "драма",
+        "биография"
+      ],
+      "runtime": 120,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.4,
+      "overview": "Парнишка-футболист не может справиться со вспышками сквернословия. Духоподъёмное драмеди по реальной истории",
+      "lists": [
+        "genre_драма",
+        "kp_top250",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt0284595",
+      "kpId": 41381,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "В августе 44-го",
+      "originalTitle": "В августе 44-го",
+      "year": 2001,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/41381.jpg",
+      "genres": [
+        "драма",
+        "детектив",
+        "боевик",
+        "военный",
+        "история"
+      ],
+      "runtime": 118,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 7.3,
+      "overview": "Опергруппа капитана Алехина устраивает засаду на немецких агентов. Военный фильм с отличным актерским составом",
+      "lists": [
+        "genre_драма",
+        "genre_детектив",
+        "genre_боевик",
+        "genre_военный",
+        "genre_история",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "kp46225",
+      "kpId": 46225,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Бриллиантовая рука",
+      "originalTitle": "Бриллиантовая рука",
+      "year": 1968,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/46225.jpg",
+      "genres": [
+        "криминал",
+        "комедия"
+      ],
+      "runtime": 94,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.2,
+      "overview": "Контрабандисты гоняются за примерным семьянином. Народная комедия с элементами абсурда от Леонида Гайдая",
+      "lists": [
+        "genre_криминал",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt12042730",
+      "kpId": 1382256,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Проект «Конец света»",
+      "originalTitle": "Project Hail Mary",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1382256.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "приключения",
+        "комедия"
+      ],
+      "runtime": 156,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.2,
+      "overview": "Неудачливый учёный и его необычный друг должны спасти свои миры от гибели. Фантастика с Райаном Гослингом",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_комедия",
+        "kp_top250",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt0482571",
+      "kpId": 195334,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Престиж",
+      "originalTitle": "The Prestige",
+      "year": 2006,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/195334.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "детектив",
+        "фантастика"
+      ],
+      "runtime": 130,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.5,
+      "overview": "На что пойдут иллюзионисты ради идеального трюка? Виртуозный триллер с Хью Джекманом и Кристианом Бэйлом",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_детектив",
+        "genre_фантастика",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0241527",
+      "kpId": 689,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Гарри Поттер и философский камень",
+      "originalTitle": "Harry Potter and the Sorcerer's Stone",
+      "year": 2001,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/689.jpg",
+      "genres": [
+        "приключения",
+        "фэнтези",
+        "семейный"
+      ],
+      "runtime": 152,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 7.7,
+      "overview": "Гарри поступает в школу магии Хогвартс и заводит друзей. Первая часть большой франшизы о маленьком волшебнике",
+      "lists": [
+        "genre_приключения",
+        "genre_фэнтези",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0119116",
+      "kpId": 2656,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Пятый элемент",
+      "originalTitle": "The Fifth Element",
+      "year": 1997,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/2656.jpg",
+      "genres": [
+        "мелодрама",
+        "фантастика",
+        "боевик",
+        "комедия"
+      ],
+      "runtime": 126,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 7.6,
+      "overview": "Последняя надежда человечества — безалаберный нью-йоркский таксист. Самый обаятельный фильм Люка Бессона",
+      "lists": [
+        "genre_мелодрама",
+        "genre_фантастика",
+        "genre_боевик",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0110413",
+      "kpId": 389,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Леон",
+      "originalTitle": "Léon",
+      "year": 1994,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/389.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал",
+        "боевик"
+      ],
+      "runtime": 133,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.5,
+      "overview": "Осиротевшая девочка становится напарницей наемного убийцы. Культовый триллер с Жаном Рено и Натали Портман",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "genre_боевик",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0407887",
+      "kpId": 81314,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Отступники",
+      "originalTitle": "The Departed",
+      "year": 2006,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/81314.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал"
+      ],
+      "runtime": 151,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.5,
+      "overview": "Два лучших выпускника полицейской академии оказались по разные стороны баррикады: один из них — агент мафии в рядах правоохранительных органов, другой — «крот», внедрённый в мафию. Каждый считает своим долгом обнаружить и уничтожить противника.",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt1189340",
+      "kpId": 461939,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Линкольн для адвоката",
+      "originalTitle": "The Lincoln Lawyer",
+      "year": 2011,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/461939.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал",
+        "детектив"
+      ],
+      "runtime": 114,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 7.3,
+      "overview": "Адвокат решает доказать вину клиента. Мэттью МакКонахи в судебном триллере по бестселлеру Майкла Коннелли",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "genre_детектив",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0325980",
+      "kpId": 4374,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Пираты Карибского моря: Проклятие Черной жемчужины",
+      "originalTitle": "Pirates of the Caribbean: The Curse of the Black Pearl",
+      "year": 2003,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/4374.jpg",
+      "genres": [
+        "приключения",
+        "боевик",
+        "фэнтези"
+      ],
+      "runtime": 143,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.1,
+      "overview": "Пират нападает на армию мертвецов, чтобы вернуть свой корабль. Начало приключений Джека Воробья",
+      "lists": [
+        "genre_приключения",
+        "genre_боевик",
+        "genre_фэнтези",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0120338",
+      "kpId": 2213,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Титаник",
+      "originalTitle": "Titanic",
+      "year": 1997,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/2213.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "мелодрама"
+      ],
+      "runtime": 194,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8,
+      "overview": "Запретная любовь на фоне гибели легендарного лайнера. Великий фильм-катастрофа — в отреставрированной версии",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_мелодрама",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0499549",
+      "kpId": 251733,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Аватар",
+      "originalTitle": "Avatar",
+      "year": 2009,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/251733.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "приключения",
+        "боевик"
+      ],
+      "runtime": 162,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8,
+      "ratingImdb": 7.9,
+      "overview": "Парализованный морпех становится мессией для жителей Пандоры. Самый кассовый фильм в истории кино",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_боевик",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "kp44745",
+      "kpId": 44745,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Кавказская пленница, или Новые приключения Шурика",
+      "originalTitle": "Кавказская пленница, или Новые приключения Шурика",
+      "year": 1966,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/44745.jpg",
+      "genres": [
+        "мелодрама",
+        "приключения",
+        "комедия",
+        "мюзикл"
+      ],
+      "runtime": 82,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.2,
+      "overview": "Отважный Шурик бросается спасать красавицу Нину из лап похитителей. Добродушная советская комедия",
+      "lists": [
+        "genre_мелодрама",
+        "genre_приключения",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0361748",
+      "kpId": 9691,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Бесславные ублюдки",
+      "originalTitle": "Inglourious Basterds",
+      "year": 2009,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/9691.jpg",
+      "genres": [
+        "драма",
+        "боевик",
+        "комедия",
+        "военный"
+      ],
+      "runtime": 153,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8,
+      "ratingImdb": 8.4,
+      "overview": "Американский спецотряд жестоко расправляется с нацистами. Пародия на военные фильмы от Квентина Тарантино",
+      "lists": [
+        "genre_драма",
+        "genre_боевик",
+        "genre_комедия",
+        "genre_военный",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0120735",
+      "kpId": 522,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Карты, деньги, два ствола",
+      "originalTitle": "Lock, Stock and Two Smoking Barrels",
+      "year": 1998,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/522.jpg",
+      "genres": [
+        "криминал",
+        "боевик",
+        "комедия"
+      ],
+      "runtime": 107,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.1,
+      "overview": "Четверке друзей из Лондона нужно где-то найти 500 000 фунтов. Культовая черная комедия, дебют Гая Ричи",
+      "lists": [
+        "genre_криминал",
+        "genre_боевик",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt1853728",
+      "kpId": 586397,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Джанго освобожденный",
+      "originalTitle": "Django Unchained",
+      "year": 2012,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/586397.jpg",
+      "genres": [
+        "драма",
+        "вестерн",
+        "боевик",
+        "комедия"
+      ],
+      "runtime": 165,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 8.5,
+      "overview": "Метко шутя и стреляя, охотники за головами уничтожают негодяев. Квентин Тарантино пробует силы в вестерне",
+      "lists": [
+        "genre_драма",
+        "genre_боевик",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0091251",
+      "kpId": 42571,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Иди и смотри",
+      "originalTitle": "Иди и смотри",
+      "year": 1985,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/42571.jpg",
+      "genres": [
+        "драма",
+        "военный",
+        "история"
+      ],
+      "runtime": 136,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.3,
+      "overview": "Великая Отечественная глазами подростка. Шедевр Элема Климова — один из самых страшных фильмов о войне",
+      "lists": [
+        "genre_драма",
+        "genre_военный",
+        "genre_история",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0332452",
+      "kpId": 3442,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Троя",
+      "originalTitle": "Troy",
+      "year": 2004,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/3442.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "боевик",
+        "история"
+      ],
+      "runtime": 163,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 7.3,
+      "overview": "Ахилл вступает в битву, которая изменит судьбу древнего мира. Грандиозный пеплум с Брэдом Питтом",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "genre_боевик",
+        "genre_история",
+        "kp_top250",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt0304141",
+      "kpId": 322,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Гарри Поттер и узник Азкабана",
+      "originalTitle": "Harry Potter and the Prisoner of Azkaban",
+      "year": 2004,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/322.jpg",
+      "genres": [
+        "приключения",
+        "фэнтези",
+        "семейный"
+      ],
+      "runtime": 142,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 7.9,
+      "overview": "Беглый маг, тайны прошлого и путешествия во времени. В третьей части поттерианы Альфонсо Куарон сгущает краски",
+      "lists": [
+        "genre_приключения",
+        "genre_фэнтези",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt33764258",
+      "kpId": 6385370,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Одиссея",
+      "originalTitle": "The Odyssey",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6385370.jpg",
+      "genres": [
+        "приключения",
+        "боевик",
+        "фэнтези"
+      ],
+      "runtime": 172,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 8.4,
+      "overview": "Его путь домой — величайшая история на свете. Эпос Кристофера Нолана, разделивший зрителей ещё до премьеры",
+      "lists": [
+        "genre_приключения",
+        "genre_боевик",
+        "genre_фэнтези",
+        "kp_top250",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt0114369",
+      "kpId": 377,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Семь",
+      "originalTitle": "Se7en",
+      "year": 1995,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/377.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал",
+        "детектив"
+      ],
+      "runtime": 127,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 8.6,
+      "overview": "Детективы ищут маньяка, убивающего грешников. Выдающийся триллер Дэвида Финчера, ставший классикой жанра",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "genre_детектив",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt8946378",
+      "kpId": 1188529,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Достать ножи",
+      "originalTitle": "Knives Out",
+      "year": 2019,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1188529.jpg",
+      "genres": [
+        "драма",
+        "криминал",
+        "детектив",
+        "комедия"
+      ],
+      "runtime": 130,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 7.9,
+      "overview": "Частный детектив ведет запутанное дело о смерти известного писателя. Криминальная комедия с Дэниэлом Крэйгом",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "genre_детектив",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0073486",
+      "kpId": 336,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Пролетая над гнездом кукушки",
+      "originalTitle": "One Flew Over the Cuckoo's Nest",
+      "year": 1975,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/336.jpg",
+      "genres": [
+        "драма"
+      ],
+      "runtime": 133,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.6,
+      "overview": "Джек Николсон — запертый в психушке бунтарь, который борется с системой. По великому роману Кена Кизи",
+      "lists": [
+        "genre_драма",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0083100",
+      "kpId": 77263,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Приключения Шерлока Холмса и доктора Ватсона: Собака Баскервилей",
+      "originalTitle": "Приключения Шерлока Холмса и доктора Ватсона: Собака Баскервилей",
+      "year": 1981,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/77263.jpg",
+      "genres": [
+        "криминал",
+        "детектив"
+      ],
+      "runtime": 154,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.5,
+      "overview": "Ватсон вынужден жить с эксцентричным клиентом в доме на болотах. Блестящая советская экранизация Конан Дойла",
+      "lists": [
+        "genre_криминал",
+        "genre_детектив",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt2654430",
+      "kpId": 725190,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Одержимость",
+      "originalTitle": "Whiplash",
+      "year": 2013,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/725190.jpg",
+      "genres": [
+        "драма",
+        "музыка"
+      ],
+      "runtime": 106,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.5,
+      "overview": "Юный барабанщик на тернистом пути к величию. Остросюжетная драма Дэмьена Шазелла, отмеченная тремя «Оскарами»",
+      "lists": [
+        "genre_драма",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0309047",
+      "kpId": 41431,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Война",
+      "originalTitle": "Война",
+      "year": 2002,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/41431.jpg",
+      "genres": [
+        "драма",
+        "боевик",
+        "военный",
+        "история"
+      ],
+      "runtime": 120,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 7.5,
+      "overview": "Бывший пленный возвращается в Чечню освободить заложников. Предельно реалистичная драма Алексея Балабанова",
+      "lists": [
+        "genre_драма",
+        "genre_боевик",
+        "genre_военный",
+        "genre_история",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0068161",
+      "kpId": 43395,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "...А зори здесь тихие",
+      "originalTitle": "...А зори здесь тихие",
+      "year": 1972,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/43395.jpg",
+      "genres": [
+        "драма",
+        "военный",
+        "история"
+      ],
+      "runtime": 160,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8,
+      "overview": "Зенитчицы совершают подвиг во время Великой Отечественной войны. Номинированная на «Оскар» советская драма",
+      "lists": [
+        "genre_драма",
+        "genre_военный",
+        "genre_история",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt3460252",
+      "kpId": 819101,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Омерзительная восьмерка",
+      "originalTitle": "The Hateful Eight",
+      "year": 2015,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/819101.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал",
+        "детектив",
+        "вестерн"
+      ],
+      "runtime": 168,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8,
+      "ratingImdb": 7.8,
+      "overview": "Снег и несколько ублюдков на Диком Западе. Эффектная сатира на американские ценности от Квентина Тарантино",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "genre_детектив",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0298148",
+      "kpId": 5273,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Шрэк 2",
+      "originalTitle": "Shrek 2",
+      "year": 2004,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5273.jpg",
+      "genres": [
+        "мелодрама",
+        "приключения",
+        "фэнтези",
+        "комедия",
+        "мультфильм",
+        "семейный"
+      ],
+      "runtime": 93,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8,
+      "ratingImdb": 7.4,
+      "overview": "Счастью новобрачных огров мешают Фея-крестная и ее сын. Номинация на «Оскар» и первое появление Кота в сапогах",
+      "lists": [
+        "genre_мелодрама",
+        "genre_приключения",
+        "genre_фэнтези",
+        "genre_комедия",
+        "genre_мультфильм",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0099785",
+      "kpId": 8124,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Один дома",
+      "originalTitle": "Home Alone",
+      "year": 1990,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/8124.jpg",
+      "genres": [
+        "комедия",
+        "семейный"
+      ],
+      "runtime": 103,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 7.8,
+      "overview": "Мальчик-озорник задает жару грабителям. Лучшая комедия для создания праздничного настроения у всей семьи",
+      "lists": [
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0119472",
+      "kpId": 32898,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Достучаться до небес",
+      "originalTitle": "Knockin' on Heaven's Door",
+      "year": 1997,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/32898.jpg",
+      "genres": [
+        "драма",
+        "криминал",
+        "комедия"
+      ],
+      "runtime": 87,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 7.8,
+      "overview": "Смертельно больные Мартин и Руди едут к морю на угнанной машине. Роль, сделавшая Тиля Швайгера суперзвездой",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0180093",
+      "kpId": 367,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Реквием по мечте",
+      "originalTitle": "Requiem for a Dream",
+      "year": 2000,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/367.jpg",
+      "genres": [
+        "драма"
+      ],
+      "runtime": 102,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8,
+      "ratingImdb": 8.3,
+      "overview": "Жизнь героев катится под откос из-за наркозависимости. Безжалостная драма Даррена Аронофски",
+      "lists": [
+        "genre_драма",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt5951188",
+      "kpId": 1000443,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Балканский рубеж",
+      "originalTitle": "Балканский рубеж",
+      "year": 2019,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1000443.jpg",
+      "genres": [
+        "драма",
+        "боевик",
+        "военный",
+        "история"
+      ],
+      "runtime": 151,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 6.6,
+      "overview": "Российский спецназ противостоит террористам в Югославии. Милош Бикович в военном экшене по реальным событиям",
+      "lists": [
+        "genre_драма",
+        "genre_боевик",
+        "genre_военный",
+        "genre_история",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0405159",
+      "kpId": 81297,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Малышка на миллион",
+      "originalTitle": "Million Dollar Baby",
+      "year": 2004,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/81297.jpg",
+      "genres": [
+        "драма",
+        "спорт"
+      ],
+      "runtime": 132,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 8.1,
+      "overview": "Пожилой тренер делает из ученицы чемпионку по боксу. Жестокая романтика спортзалов — в драме Клинта Иствуда",
+      "lists": [
+        "genre_драма",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0118971",
+      "kpId": 3797,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Адвокат дьявола",
+      "originalTitle": "The Devil's Advocate",
+      "year": 1997,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/3797.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "детектив",
+        "фэнтези"
+      ],
+      "runtime": 144,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 7.5,
+      "overview": "Честолюбивый юрист, который защищает негодяев, получает выгодное предложение. Триллер об истинной сути зла",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_детектив",
+        "genre_фэнтези",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt3829920",
+      "kpId": 965754,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Дело храбрых",
+      "originalTitle": "Only the Brave",
+      "year": 2017,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/965754.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "биография",
+        "история"
+      ],
+      "runtime": 134,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 7.6,
+      "overview": "Пожарные пытаются остановить стихию в лесах Аризоны. Джефф Бриджес и Джош Бролин в драме по реальным событиям",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_история",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "kp77269",
+      "kpId": 77269,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Шерлок Холмс и доктор Ватсон: Знакомство",
+      "originalTitle": "Шерлок Холмс и доктор Ватсон: Знакомство",
+      "year": 1979,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/77269.jpg",
+      "genres": [
+        "криминал",
+        "детектив"
+      ],
+      "runtime": 68,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.5,
+      "overview": "Военный врач становится соседом эксцентричного сыщика. Легендарный дуэт Василия Ливанова и Виталия Соломина",
+      "lists": [
+        "genre_криминал",
+        "genre_детектив",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0080439",
+      "kpId": 63912,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Укрощение строптивого",
+      "originalTitle": "Il bisbetico domato",
+      "year": 1980,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/63912.jpg",
+      "genres": [
+        "мелодрама",
+        "комедия"
+      ],
+      "runtime": 107,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 7.6,
+      "overview": "Красавица Лиза перевоспитывает заядлого холостяка. Шекспировские страсти с Адриано Челентано и Орнеллой Мути",
+      "lists": [
+        "genre_мелодрама",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0091341",
+      "kpId": 44811,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Кин-дза-дза!",
+      "originalTitle": "Кин-дза-дза!",
+      "year": 1986,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/44811.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "комедия"
+      ],
+      "runtime": 135,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 7.8,
+      "overview": "Два советских человека попадают в другую галактику. Шедевр Георгия Данелии, сделанный из песка и ржавчины",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0472043",
+      "kpId": 160977,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Апокалипсис",
+      "originalTitle": "Apocalypto",
+      "year": 2006,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/160977.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "приключения",
+        "боевик"
+      ],
+      "runtime": 139,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 7.8,
+      "overview": "Молодой индеец пытается избежать ритуальной смерти. Кровавый эпос Мэла Гибсона, три номинации на «Оскар»",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_приключения",
+        "genre_боевик",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0295297",
+      "kpId": 688,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Гарри Поттер и Тайная комната",
+      "originalTitle": "Harry Potter and the Chamber of Secrets",
+      "year": 2002,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/688.jpg",
+      "genres": [
+        "приключения",
+        "фэнтези",
+        "семейный"
+      ],
+      "runtime": 161,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 7.5,
+      "overview": "Домашний эльф, магический дневник и привидение. Второй год Гарри в школе Хогвартс — еще более захватывающий",
+      "lists": [
+        "genre_приключения",
+        "genre_фэнтези",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "kp3563",
+      "kpId": 3563,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Трасса 60",
+      "originalTitle": "Interstate 60",
+      "year": 2001,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/3563.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "приключения",
+        "фэнтези",
+        "комедия"
+      ],
+      "runtime": 116,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 7.5,
+      "overview": "Нил отправляется в путешествие с чудаковатым попутчиком. Гари Олдман в комедийной притче об исполнении желаний",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_фэнтези",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt2119532",
+      "kpId": 649917,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "По соображениям совести",
+      "originalTitle": "Hacksaw Ridge",
+      "year": 2016,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/649917.jpg",
+      "genres": [
+        "драма",
+        "биография",
+        "военный",
+        "история"
+      ],
+      "runtime": 139,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 8.1,
+      "overview": "Сознательный уклонист проходит через все тяготы фронта. Драма Мэла Гибсона о военном медике Десмонде Доссе",
+      "lists": [
+        "genre_драма",
+        "genre_военный",
+        "genre_история",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0120382",
+      "kpId": 4541,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Шоу Трумана",
+      "originalTitle": "The Truman Show",
+      "year": 1998,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/4541.jpg",
+      "genres": [
+        "драма",
+        "комедия"
+      ],
+      "runtime": 103,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 8.2,
+      "overview": "Благополучный страховой агент обнаруживает, что он — герой реалити-шоу. Джим Керри в пророческой антиутопии",
+      "lists": [
+        "genre_драма",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0372824",
+      "kpId": 51481,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Хористы",
+      "originalTitle": "Les Choristes",
+      "year": 2004,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/51481.jpg",
+      "genres": [
+        "драма",
+        "музыка"
+      ],
+      "runtime": 95,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 7.9,
+      "overview": "Учитель пытается оградить проблемных сирот от жестокости, организовав хор. Ретродрама Кристофа Барратье",
+      "lists": [
+        "genre_драма",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0268978",
+      "kpId": 530,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Игры разума",
+      "originalTitle": "A Beautiful Mind",
+      "year": 2001,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/530.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "биография"
+      ],
+      "runtime": 135,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.2,
+      "overview": "Гениальный математик в плену галлюцинаций. Биографическая драма с Расселом Кроу, получившая 4 «Оскара»",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "kp387556",
+      "kpId": 387556,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Хатико: Самый верный друг",
+      "originalTitle": "Hachi: A Dog's Tale",
+      "year": 2008,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/387556.jpg",
+      "genres": [
+        "драма",
+        "биография",
+        "семейный"
+      ],
+      "runtime": 89,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.1,
+      "overview": "Преданный пес каждый день встречает хозяина на вокзале, что бы ни случилось. История, которая потрясла мир",
+      "lists": [
+        "genre_драма",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "kp803422",
+      "kpId": 803422,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Пеле: Рождение легенды",
+      "originalTitle": "Pelé: Birth of a Legend",
+      "year": 2015,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/803422.jpg",
+      "genres": [
+        "драма",
+        "биография",
+        "спорт"
+      ],
+      "runtime": 107,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 7.1,
+      "overview": "Как мальчик из бедной семьи стал великим национальным героем. Мотивирующий байопик о короле футбола",
+      "lists": [
+        "genre_драма",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "kp86326",
+      "kpId": 86326,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Счастливое число Слевина",
+      "originalTitle": "Lucky Number Slevin",
+      "year": 2005,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/86326.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал"
+      ],
+      "runtime": 110,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 7.7,
+      "overview": "Гангстеры втягивают обычного парня в войну кланов. Виртуозный криминальный триллер с незабываемым финалом",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt4080728",
+      "kpId": 848894,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Вторая жизнь Уве",
+      "originalTitle": "En man som heter Ove",
+      "year": 2015,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/848894.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "комедия"
+      ],
+      "runtime": 116,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 7.7,
+      "overview": "Сварливый вдовец-придира находит смысл жизни с появлением новых соседей. Добрый фильм по шведскому бестселлеру",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt1201607",
+      "kpId": 407636,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Гарри Поттер и Дары Смерти: Часть II",
+      "originalTitle": "Harry Potter and the Deathly Hallows - Part 2",
+      "year": 2011,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/407636.jpg",
+      "genres": [
+        "детектив",
+        "приключения",
+        "фэнтези",
+        "семейный"
+      ],
+      "runtime": 130,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 8.1,
+      "overview": "Гарри уничтожил почти все крестражи Волан-де-Морта, но еще не знает о последнем. Финал грандиозной саги",
+      "lists": [
+        "genre_детектив",
+        "genre_приключения",
+        "genre_фэнтези",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0065670",
+      "kpId": 46789,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "12 стульев",
+      "originalTitle": "12 стульев",
+      "year": 1971,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/46789.jpg",
+      "genres": [
+        "криминал",
+        "приключения",
+        "комедия"
+      ],
+      "runtime": 153,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 8.1,
+      "overview": "Товарищ Бендер в погоне за бриллиантами мадам Петуховой. Гайдаевская экранизация великого сатирического романа",
+      "lists": [
+        "genre_криминал",
+        "genre_приключения",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0218967",
+      "kpId": 664,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Семьянин",
+      "originalTitle": "The Family Man",
+      "year": 2000,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/664.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "фэнтези",
+        "комедия"
+      ],
+      "runtime": 125,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8,
+      "ratingImdb": 6.9,
+      "overview": "Бизнесмен должен сделать выбор между карьерой и семьей. Рождественская сказка с Николасом Кейджем",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "genre_фэнтези",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0050634",
+      "kpId": 7724,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Летят журавли",
+      "originalTitle": "Летят журавли",
+      "year": 1957,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/7724.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "военный",
+        "история"
+      ],
+      "runtime": 95,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.3,
+      "overview": "Любовь сильнее предательства и смерти. Шедевр о Великой Отечественной войне, который потряс весь мир",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "genre_военный",
+        "genre_история",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt16311594",
+      "kpId": 5003510,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "F1",
+      "originalTitle": "F1",
+      "year": 2025,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5003510.jpg",
+      "genres": [
+        "драма",
+        "спорт"
+      ],
+      "runtime": 155,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 7.6,
+      "overview": "Стареющий гонщик должен сработаться с амбициозным юнцом. Брэд Питт в эталонной спортивной драме",
+      "lists": [
+        "genre_драма",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "kp345",
+      "kpId": 345,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Молчание ягнят",
+      "originalTitle": "The Silence of the Lambs",
+      "year": 1990,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/345.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал",
+        "детектив",
+        "ужасы"
+      ],
+      "runtime": 118,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 8.6,
+      "overview": "Интеллектуал-людоед помогает молодой сотруднице ФБР. Веха в жанре триллера — и гениальная игра Энтони Хопкинса",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "genre_детектив",
+        "genre_ужасы",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt1663202",
+      "kpId": 522941,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Выживший",
+      "originalTitle": "The Revenant",
+      "year": 2015,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/522941.jpg",
+      "genres": [
+        "драма",
+        "приключения",
+        "биография",
+        "вестерн",
+        "боевик"
+      ],
+      "runtime": 156,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 7.9,
+      "ratingImdb": 8,
+      "overview": "Ранен, но не сломлен. Радикальный перформанс Леонардо ДиКаприо, который наконец принёс ему «Оскар»",
+      "lists": [
+        "genre_драма",
+        "genre_приключения",
+        "genre_боевик",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt1979320",
+      "kpId": 596125,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Гонка",
+      "originalTitle": "Rush",
+      "year": 2013,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/596125.jpg",
+      "genres": [
+        "драма",
+        "биография",
+        "спорт"
+      ],
+      "runtime": 123,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 8.1,
+      "overview": "Два пилота рискуют жизнью ради победы в «Формуле-1». Яростная драма с Крисом Хемсвортом и Даниэлем Брюлем",
+      "lists": [
+        "genre_драма",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0113568",
+      "kpId": 8228,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Призрак в доспехах",
+      "originalTitle": "Koukaku Kidoutai",
+      "year": 1995,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/8228.jpg",
+      "genres": [
+        "криминал",
+        "детектив",
+        "фантастика",
+        "боевик",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": 82,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 7.9,
+      "overview": "Полицейская-киборг преследует таинственного хакера. Культовый киберпанк, вдохновивший создателей «Матрицы»",
+      "lists": [
+        "genre_криминал",
+        "genre_детектив",
+        "genre_фантастика",
+        "genre_боевик",
+        "genre_мультфильм",
+        "genre_аниме",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "kp77265",
+      "kpId": 77265,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Шерлок Холмс и доктор Ватсон: Кровавая надпись",
+      "originalTitle": "Шерлок Холмс и доктор Ватсон: Кровавая надпись",
+      "year": 1979,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/77265.jpg",
+      "genres": [
+        "криминал",
+        "детектив"
+      ],
+      "runtime": 66,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.3,
+      "overview": "Прославленный сыщик выходит на мстителя, убивающего пилюлями. Детектив о первых расследованиях Шерлока Холмса",
+      "lists": [
+        "genre_криминал",
+        "genre_детектив",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt1197624",
+      "kpId": 406408,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Законопослушный гражданин",
+      "originalTitle": "Law Abiding Citizen",
+      "year": 2009,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/406408.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал",
+        "боевик"
+      ],
+      "runtime": 108,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 7.4,
+      "overview": "Потеряв семью, Клайд жестоко мстит убийцам и нечестному прокурору. Брутальный триллер с Джерардом Батлером",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "genre_боевик",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt2024544",
+      "kpId": 606646,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "12 лет рабства",
+      "originalTitle": "12 Years a Slave",
+      "year": 2013,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/606646.jpg",
+      "genres": [
+        "драма",
+        "биография",
+        "история"
+      ],
+      "runtime": 133,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8,
+      "ratingImdb": 8.1,
+      "overview": "Пронизанная болью хроника жизни темнокожего невольника. Мощная история о цене свободы",
+      "lists": [
+        "genre_драма",
+        "genre_история",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0076391",
+      "kpId": 46638,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Мимино",
+      "originalTitle": "Мимино",
+      "year": 1977,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/46638.jpg",
+      "genres": [
+        "драма",
+        "комедия"
+      ],
+      "runtime": 92,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 8,
+      "overview": "Путь грузина-пилота в большую авиацию. Нежная и уморительная лирическая комедия Георгия Данелии",
+      "lists": [
+        "genre_драма",
+        "genre_комедия",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0200267",
+      "kpId": 41442,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Ворошиловский стрелок",
+      "originalTitle": "Ворошиловский стрелок",
+      "year": 1999,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/41442.jpg",
+      "genres": [
+        "драма",
+        "криминал"
+      ],
+      "runtime": 95,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8,
+      "ratingImdb": 7.4,
+      "overview": "Ветеран мстит за поруганную честь внучки. Отчаянный самосуд в драме Станислава Говорухина с Михаилом Ульяновым",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt0113277",
+      "kpId": 571,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Схватка",
+      "originalTitle": "Heat",
+      "year": 1995,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/571.jpg",
+      "genres": [
+        "драма",
+        "криминал",
+        "боевик"
+      ],
+      "runtime": 171,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 8.3,
+      "overview": "«Я один, но мне не одиноко». Грандиозный экшен Майкла Манна, который стал эталоном жанра",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "genre_боевик",
+        "kp_top250"
+      ]
+    },
+    {
+      "id": "tt37601032",
+      "kpId": 8484833,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Последний богатырь. Колобок",
+      "originalTitle": "Последний богатырь. Колобок",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/8484833.jpg",
+      "genres": [
+        "приключения",
+        "фэнтези",
+        "комедия",
+        "семейный"
+      ],
+      "runtime": 109,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 2.9,
+      "ratingImdb": 1,
+      "overview": "Дмитрий Журавлев в комедии про самого харизматичного жителя Белогорья. Билеты — на Кинопоиске!",
+      "lists": [
+        "genre_приключения",
+        "genre_фэнтези",
+        "genre_комедия",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt22084616",
+      "kpId": 5494049,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Человек-паук: Новый день",
+      "originalTitle": "Spider-Man: Brand New Day",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5494049.jpg",
+      "genres": [
+        "фантастика",
+        "приключения",
+        "боевик"
+      ],
+      "runtime": 150,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 8.1,
+      "overview": "Питер Паркер начинает всё с чистого листа. Том Холланд и Зендея в новой серии приключений дружелюбного соседа",
+      "lists": [
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_боевик",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt11378946",
+      "kpId": 5437614,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Майкл",
+      "originalTitle": "Michael",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5437614.jpg",
+      "genres": [
+        "драма",
+        "биография",
+        "музыка"
+      ],
+      "runtime": 127,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 7.8,
+      "ratingImdb": 7.7,
+      "overview": "Just beat it! Биография короля поп-музыки, которой хочется подпевать",
+      "lists": [
+        "genre_драма",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt37287335",
+      "kpId": 10355286,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Обсессия",
+      "originalTitle": "Obsession",
+      "year": 2025,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/10355286.jpg",
+      "genres": [
+        "ужасы"
+      ],
+      "runtime": 100,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 7.1,
+      "ratingImdb": 8.1,
+      "overview": "В него влюбилась девушка мечты, но есть нюанс. Один из самых успешных хорроров в истории",
+      "lists": [
+        "genre_ужасы",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt26657236",
+      "kpId": 5452841,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Закулисье реальности",
+      "originalTitle": "Backrooms",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5452841.jpg",
+      "genres": [
+        "ужасы"
+      ],
+      "runtime": 105,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 6.5,
+      "ratingImdb": 6.9,
+      "overview": "Продавец мебели находит бесконечный лабиринт пустых комнат. Хоррор-хит по мотивам легендарной крипипасты",
+      "lists": [
+        "genre_ужасы",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt33054647",
+      "kpId": 6135670,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Смешарики сквозь вселенные",
+      "originalTitle": "Смешарики сквозь вселенные",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6135670.jpg",
+      "genres": [
+        "фантастика",
+        "приключения",
+        "комедия"
+      ],
+      "runtime": 85,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 6.3,
+      "ratingImdb": null,
+      "overview": "Космическое приключение Ёжика и Кроша, которые превратились в обычных детей. Билеты — на Кинопоиске!",
+      "lists": [
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_комедия",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt38190257",
+      "kpId": 8290235,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Твоё сердце будет разбито",
+      "originalTitle": "Твоё сердце будет разбито",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/8290235.jpg",
+      "genres": [
+        "мелодрама"
+      ],
+      "runtime": 134,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 7.5,
+      "ratingImdb": null,
+      "overview": "Новенькая влюбляется в самого опасного парня школы. Сенсационная мелодрама по бестселлеру Анны Джейн",
+      "lists": [
+        "genre_мелодрама",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt14173636",
+      "kpId": 5138994,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Приглашение",
+      "originalTitle": "The Invite",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5138994.jpg",
+      "genres": [
+        "комедия"
+      ],
+      "runtime": 108,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 6.9,
+      "ratingImdb": 7,
+      "overview": "Отношения Джо и Анджелы уже не так искрят, как раньше. Желая получить яркие впечатления, Анджела приглашает в гости соседей — эффектную пару, отношения которых, наоборот, полны страсти, судя по громким стонам из их квартиры. Но вечер идет не по плану — светская беседа очень быстро меняет направление, ведь дерзкие соседи выступают с весьма необычным предложением.",
+      "lists": [
+        "genre_комедия",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt32268156",
+      "kpId": 6943600,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Последний дом",
+      "originalTitle": "The Last House",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6943600.jpg",
+      "genres": [
+        "драма",
+        "ужасы"
+      ],
+      "runtime": 112,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 5.9,
+      "ratingImdb": 5.7,
+      "overview": "Семья из четырёх человек внезапно оказывается заперта в собственном доме без возможности выбраться. Чтобы выжить, им нужно действовать сообща — противостоять не только истощающимся запасам, но и таинственной, нависающей угрозе, которая не даёт им покинуть жилище.",
+      "lists": [
+        "genre_драма",
+        "genre_ужасы",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt10872600",
+      "kpId": 1309570,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Человек-паук: Нет пути домой",
+      "originalTitle": "Spider-Man: No Way Home",
+      "year": 2021,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1309570.jpg",
+      "genres": [
+        "фантастика",
+        "приключения",
+        "боевик",
+        "фэнтези"
+      ],
+      "runtime": 148,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 7.9,
+      "ratingImdb": 8.1,
+      "overview": "Враги Человека-паука проникают в наш мир из других измерений. Фееричный блокбастер с камео любимых героев и злодеев",
+      "lists": [
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_боевик",
+        "genre_фэнтези",
+        "popular"
+      ]
+    },
+    {
+      "id": "kp13311817",
+      "kpId": 13311817,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Время сиять",
+      "originalTitle": "Waindeueop: deo mubi",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/13311817.jpg",
+      "genres": [
+        "фэнтези",
+        "спорт"
+      ],
+      "runtime": 87,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": null,
+      "ratingImdb": 8,
+      "overview": "Старшеклассник Ли У-джин — подающий надежды бейсболист. Его блестящие перспективы оказываются под угрозой из-за внезапной потери контроля над подачей. Тренер перестает в него верить, парень впадает в отчаяние, но всё меняется с появлением загадочного ученика Квон Тхэ-хи, который становится его наставником и лучшим другом. Благодаря его поддержке У-джин преодолевает страхи и вновь становится лучшим игроком. Но внезапно Тхэ-хи исчезает. В поисках друга У-джин сталкивается с шокирующей правдой.",
+      "lists": [
+        "genre_фэнтези",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt21357150",
+      "kpId": 5060245,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Мстители: Доктор Дум",
+      "originalTitle": "Avengers: Doomsday",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5060245.jpg",
+      "genres": [
+        "фантастика",
+        "приключения",
+        "боевик"
+      ],
+      "runtime": 165,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": null,
+      "ratingImdb": null,
+      "overview": "Супергерои против учёного, решившего уничтожить мир. Эпичное возвращение Роберта Дауни мл. в новой роли",
+      "lists": [
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_боевик",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt15047880",
+      "kpId": 4510025,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "День разоблачения",
+      "originalTitle": "Disclosure Day",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/4510025.jpg",
+      "genres": [
+        "триллер",
+        "фантастика"
+      ],
+      "runtime": 120,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 6.1,
+      "ratingImdb": 6.7,
+      "overview": "Как человечество отреагирует на правду о внеземных цивилизациях? Эмили Блант в блокбастере Стивена Спилберга",
+      "lists": [
+        "genre_триллер",
+        "genre_фантастика",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt2250912",
+      "kpId": 690593,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Человек-паук: Возвращение домой",
+      "originalTitle": "Spider-Man: Homecoming",
+      "year": 2017,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/690593.jpg",
+      "genres": [
+        "фантастика",
+        "приключения",
+        "боевик"
+      ],
+      "runtime": 133,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 7.2,
+      "ratingImdb": 7.4,
+      "overview": "Юный Спайдермен добивается места в команде Мстителей. Перезагрузка франшизы — теперь в киновселенной Marvel",
+      "lists": [
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_боевик",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt27165187",
+      "kpId": 5287148,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "На краю Оук-стрит",
+      "originalTitle": "The End of Oak Street",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5287148.jpg",
+      "genres": [
+        "фантастика",
+        "приключения",
+        "боевик"
+      ],
+      "runtime": 100,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": null,
+      "ratingImdb": null,
+      "overview": "Семья Платт объединяется, чтобы сориентироваться в новой обстановке и выжить после того, как необъяснимое событие перенесло их пригородный район в неизвестное место.",
+      "lists": [
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_боевик",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt31170389",
+      "kpId": 5463793,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Зловещие мертвецы: Пекло",
+      "originalTitle": "Evil Dead Burn",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5463793.jpg",
+      "genres": [
+        "ужасы"
+      ],
+      "runtime": 120,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 6.7,
+      "ratingImdb": 6.6,
+      "overview": "Возвращение культовой хоррор-франшизы о борьбе с демонами. Билеты — на Кинопоиске!",
+      "lists": [
+        "genre_ужасы",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt0145487",
+      "kpId": 838,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Человек-паук",
+      "originalTitle": "Spider-Man",
+      "year": 2002,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/838.jpg",
+      "genres": [
+        "фантастика",
+        "приключения",
+        "боевик"
+      ],
+      "runtime": 121,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 7.8,
+      "ratingImdb": 7.4,
+      "overview": "Школьник-неудачник Питер Паркер становится супергероем. Тоби Магуайр в культовом кинокомиксе Сэма Рэйми",
+      "lists": [
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_боевик",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt32890033",
+      "kpId": 6020597,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Миньоны и монстры",
+      "originalTitle": "Minions & Monsters",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6020597.jpg",
+      "genres": [
+        "фантастика",
+        "приключения",
+        "комедия",
+        "мультфильм",
+        "семейный"
+      ],
+      "runtime": 90,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 6.6,
+      "ratingImdb": 6.5,
+      "overview": "1920-е годы. Миньоны снимаются в кино и покоряют Голливуд. Чтобы снять свой собственный фильм о монстрах, они отправляются на поиски самых пугающих существ.",
+      "lists": [
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_комедия",
+        "genre_мультфильм",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt29516222",
+      "kpId": 6080706,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Крушение рейса",
+      "originalTitle": "Deep Water",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6080706.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "боевик",
+        "ужасы"
+      ],
+      "runtime": 110,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 5.6,
+      "ratingImdb": 5.4,
+      "overview": "Самолёт международного рейса Лос-Анджелес – Шанхай вынужден совершить аварийную посадку в океане. Те, кто выжили в авиакатастрофе, вскоре пожалеют, что не погибли при падении самолета. Теперь им предстоит объединиться, чтобы спастись от кровожадных акул, привлеченных обломками самолета. Они теряют веру в спасение, но продолжают отчаянную борьбу за жизнь.",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_боевик",
+        "genre_ужасы",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt31591561",
+      "kpId": 8477754,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Холоп 3",
+      "originalTitle": "Холоп 3",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/8477754.jpg",
+      "genres": [
+        "приключения",
+        "комедия"
+      ],
+      "runtime": 126,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 7.2,
+      "ratingImdb": null,
+      "overview": "Пара мажоров попадает в эпоху Петра I и в Османскую империю. Новая часть комедийного суперхита",
+      "lists": [
+        "genre_приключения",
+        "genre_комедия",
+        "popular"
+      ]
+    },
+    {
+      "id": "kp7421341",
+      "kpId": 7421341,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Коммерсант",
+      "originalTitle": "Коммерсант",
+      "year": 2025,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/7421341.jpg",
+      "genres": [
+        "драма"
+      ],
+      "runtime": 96,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 7.8,
+      "ratingImdb": null,
+      "overview": "Банкир пытается выжить в тюрьме в 1990-е. Криминальная драма с Александром Петровым и Хаски",
+      "lists": [
+        "genre_драма",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt6320628",
+      "kpId": 1008445,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Человек-паук: Вдали от дома",
+      "originalTitle": "Spider-Man: Far from Home",
+      "year": 2019,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1008445.jpg",
+      "genres": [
+        "фантастика",
+        "приключения",
+        "боевик",
+        "фэнтези",
+        "комедия"
+      ],
+      "runtime": 129,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 7.4,
+      "ratingImdb": 7.3,
+      "overview": "Самый юный из Мстителей едет на каникулы в Европу и знакомится с Мистерио. Остроумный комикс о силе иллюзий",
+      "lists": [
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_комедия",
+        "popular"
+      ]
+    },
+    {
+      "id": "kp8078157",
+      "kpId": 8078157,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Ешь. Молись. Худей",
+      "originalTitle": "Saccharine",
+      "year": 2025,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/8078157.jpg",
+      "genres": [
+        "ужасы"
+      ],
+      "runtime": 112,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 5.6,
+      "ratingImdb": 6.1,
+      "overview": "Студентка-медик Хана в погоне за идеальной фигурой увлекается новыми методами похудения с использованием человеческих останков. То, что начинается как эксперимент, быстро превращается в кошмар. Зловещая сила, скрытая в мертвых, пробуждается, вторгаясь в жизнь девушки. И чем стройнее и совершенней становится Хана, тем ненасытней преследующее ее существо.",
+      "lists": [
+        "genre_ужасы",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt19035928",
+      "kpId": 10919087,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Последний рубеж",
+      "originalTitle": "Lucky Strike",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/10919087.jpg",
+      "genres": [
+        "драма",
+        "боевик",
+        "военный",
+        "история"
+      ],
+      "runtime": 103,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 5.4,
+      "ratingImdb": 5.9,
+      "overview": "Во время Арденнской операции раненый американский офицер Джон Касл оказывается в тылу врага. Оставшийся единственным выжившим в отряде, он пытается пробиться к своим, имея при себе лишь военный радиопередатчик. Теперь Каслу надо будет попытаться выжить, но это будет весьма непросто.",
+      "lists": [
+        "genre_драма",
+        "genre_боевик",
+        "genre_военный",
+        "genre_история",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt27681354",
+      "kpId": 5437609,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Грязные деньги",
+      "originalTitle": "In the Grey",
+      "year": 2025,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5437609.jpg",
+      "genres": [
+        "триллер",
+        "криминал",
+        "боевик"
+      ],
+      "runtime": 98,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 6.6,
+      "ratingImdb": 6.7,
+      "overview": "Один остров, два спеца — и миллиард, который нужно украсть. Азартный экшен Гая Ричи",
+      "lists": [
+        "genre_триллер",
+        "genre_криминал",
+        "genre_боевик",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt32261958",
+      "kpId": 6789621,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Тайный дневник Верити",
+      "originalTitle": "Verity",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6789621.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал",
+        "мелодрама",
+        "детектив"
+      ],
+      "runtime": null,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": null,
+      "ratingImdb": null,
+      "overview": "Нуждающаяся в работе писательница Лоуэн Эшли получает предложение от Джереми Кроуфорда — ей нужно дописать романы его жены. Жена Джереми — автор популярной серии романов Верити Кроуфорд, и из-за загадочного несчастного случая она не может закончить произведения. Работа принимает неожиданный оборот, когда Лоуэн находит тревожные личные записки Верити. Сталкиваясь с семейными тайнами, Лоуэн пытается отделить вымысел от реальности, в то время как границы в её отношениях с Джереми размываются.",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "genre_мелодрама",
+        "genre_детектив",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt31192372",
+      "kpId": 5610132,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Вышка 2: Мёртвая точка",
+      "originalTitle": "Fall 2: Deadpoint",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5610132.jpg",
+      "genres": [
+        "триллер",
+        "драма"
+      ],
+      "runtime": 100,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": null,
+      "ratingImdb": 7.5,
+      "overview": "После смерти сестры Джакс Хантер пытается справиться с утратой и неожиданно сближается с её смелой подругой Люс. Вместе они отправляются в Таиланд, где решаются пройти опасный маршрут на горе Кван. Но путешествие превращается в борьбу за выживание, когда девушки оказываются в ловушке над пропастью.",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt32357218",
+      "kpId": 6548103,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Убежище",
+      "originalTitle": "Shelter",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6548103.jpg",
+      "genres": [
+        "боевик"
+      ],
+      "runtime": 107,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 7.2,
+      "ratingImdb": 6.2,
+      "overview": "Бывших спецагентов не бывает. Джейсон Стэйтем в боевике режиссёра «Гренландии»",
+      "lists": [
+        "genre_боевик",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt27543632",
+      "kpId": 6750360,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Горничная",
+      "originalTitle": "The Housemaid",
+      "year": 2025,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6750360.jpg",
+      "genres": [
+        "триллер",
+        "драма"
+      ],
+      "runtime": 131,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 7.6,
+      "ratingImdb": 6.8,
+      "overview": "Роскошный особняк, молодая домработница — и скелеты в шкафах. Хитовый триллер с Сидни Суини",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt33071426",
+      "kpId": 6530127,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Вот это драма!",
+      "originalTitle": "The Drama",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6530127.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "комедия"
+      ],
+      "runtime": 106,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 6.6,
+      "ratingImdb": 7.2,
+      "overview": "Как вы поступите, узнав мрачный секрет второй половинки? Нашумевший ромком c Робертом Паттинсоном и Зендеей",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "genre_комедия",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt27419466",
+      "kpId": 5301021,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Моана",
+      "originalTitle": "Moana",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5301021.jpg",
+      "genres": [
+        "приключения",
+        "фэнтези",
+        "комедия",
+        "семейный"
+      ],
+      "runtime": 115,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 5.9,
+      "ratingImdb": 5.8,
+      "overview": "Моана откликается на зов океана. Впервые в жизни она отправляется за риф своего острова Мотунуи вместе с прославленным полубогом Мауи. Их ждёт незабываемое путешествие, которое должно вернуть процветание её народу.",
+      "lists": [
+        "genre_приключения",
+        "genre_фэнтези",
+        "genre_комедия",
+        "popular"
+      ]
+    },
+    {
+      "id": "tt36313062",
+      "kpId": 10646933,
+      "tmdbId": null,
+      "type": "movie",
+      "title": "Мечтать не вредно",
+      "originalTitle": "Le rêve américain",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/10646933.jpg",
+      "genres": [
+        "комедия",
+        "спорт"
+      ],
+      "runtime": 121,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 7.6,
+      "overview": "Парни-аутсайдеры хотят стать самыми крутыми баскетбольными агентами. Духоподъёмная комедия от продюсеров «1+1»",
+      "lists": [
+        "genre_комедия",
+        "popular"
+      ]
+    },
+    {
+      "id": "kp7036356",
+      "kpId": 7036356,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Холод",
+      "originalTitle": "Холод",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/7036356.jpg",
+      "genres": [
+        "триллер",
+        "драма"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 10,
+      "episodeRuntime": null,
+      "ratingKp": 7.9,
+      "ratingImdb": null,
+      "overview": "Она пойдёт на всё ради мести. Новое прочтение «Графа Монте-Кристо» — с Любовью Аксёновой и Петром Фёдоровым",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "series"
+      ]
+    },
+    {
+      "id": "tt11198330",
+      "kpId": 1316601,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Дом Дракона",
+      "originalTitle": "House of the Dragon",
+      "year": 2022,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1316601.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "боевик",
+        "фэнтези"
+      ],
+      "runtime": null,
+      "seasons": 3,
+      "episodes": 26,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 8.3,
+      "overview": "Кто из Таргариенов займёт Железный трон? Грандиозная предыстория «Игры престолов»",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "genre_боевик",
+        "genre_фэнтези",
+        "series"
+      ]
+    },
+    {
+      "id": "tt4426042",
+      "kpId": 820638,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Мажор",
+      "originalTitle": "Мажор",
+      "year": 2014,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/820638.jpg",
+      "genres": [
+        "драма",
+        "криминал"
+      ],
+      "runtime": null,
+      "seasons": 5,
+      "episodes": 56,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 7.5,
+      "overview": "Когда закон бессилен, за дело берутся они. Продолжение экшен-саги с Павлом Прилучным",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "series"
+      ]
+    },
+    {
+      "id": "tt14688458",
+      "kpId": 4541515,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Укрытие",
+      "originalTitle": "Silo",
+      "year": 2023,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/4541515.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "фантастика"
+      ],
+      "runtime": null,
+      "seasons": 5,
+      "episodes": 32,
+      "episodeRuntime": null,
+      "ratingKp": 7.8,
+      "ratingImdb": 8.1,
+      "overview": "Жители тоталитарного подземного бункера пытаются прорваться на поверхность. Антиутопия с Ребеккой Фергюсон",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_фантастика",
+        "series"
+      ]
+    },
+    {
+      "id": "tt13293588",
+      "kpId": 1312253,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Реинкарнация безработного: История о приключениях в другом мире",
+      "originalTitle": "Mushoku Tensei: Isekai Ittara Honki Dasu",
+      "year": 2021,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1312253.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "приключения",
+        "фэнтези",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 3,
+      "episodes": 60,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 8.2,
+      "overview": "Хикикомори в теле подростка пытается выжить в мире магов и демонов. Динамичная анимация по хитовому ранобэ",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "genre_приключения",
+        "genre_фэнтези",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "series"
+      ]
+    },
+    {
+      "id": "tt6481562",
+      "kpId": 940680,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Ольга",
+      "originalTitle": "Ольга",
+      "year": 2016,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/940680.jpg",
+      "genres": [
+        "драма",
+        "комедия"
+      ],
+      "runtime": null,
+      "seasons": 5,
+      "episodes": 92,
+      "episodeRuntime": null,
+      "ratingKp": 6.6,
+      "ratingImdb": 6.5,
+      "overview": "Обычная женщина решает проблемы своей непутёвой семейки. Оптимистичная комедия со звёздным кастом",
+      "lists": [
+        "genre_драма",
+        "genre_комедия",
+        "series"
+      ]
+    },
+    {
+      "id": "tt0944947",
+      "kpId": 464963,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Игра престолов",
+      "originalTitle": "Game of Thrones",
+      "year": 2011,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/464963.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "приключения",
+        "боевик",
+        "фэнтези"
+      ],
+      "runtime": null,
+      "seasons": 8,
+      "episodes": 73,
+      "episodeRuntime": null,
+      "ratingKp": 9,
+      "ratingImdb": 9.2,
+      "overview": "Рыцари, мертвецы и драконы в эпической битве за судьбы мира. Фэнтези HBO, которое навсегда изменило телевидение",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "genre_приключения",
+        "genre_боевик",
+        "genre_фэнтези",
+        "series"
+      ]
+    },
+    {
+      "id": "tt2580046",
+      "kpId": 958607,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Леди Баг и Супер-Кот",
+      "originalTitle": "Miraculous: Tales of Ladybug & Cat Noir",
+      "year": 2015,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/958607.jpg",
+      "genres": [
+        "мелодрама",
+        "приключения",
+        "боевик",
+        "фэнтези",
+        "мультфильм",
+        "семейный",
+        "детский"
+      ],
+      "runtime": null,
+      "seasons": 7,
+      "episodes": 158,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 7.5,
+      "overview": "Влюбленные подростки-супергерои спасают Париж. Самый романтичный мультсериал о борьбе добра со злом",
+      "lists": [
+        "genre_мелодрама",
+        "genre_приключения",
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "series"
+      ]
+    },
+    {
+      "id": "kp11272092",
+      "kpId": 11272092,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "История его служанки",
+      "originalTitle": "История его служанки",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/11272092.jpg",
+      "genres": [
+        "мелодрама"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 90,
+      "episodeRuntime": null,
+      "ratingKp": 7.4,
+      "ratingImdb": null,
+      "overview": "Чтобы спасти семью от краха, дворянка устраивается горничной к графу. Костюмная сага с Матвеем Лыковым",
+      "lists": [
+        "genre_мелодрама",
+        "series"
+      ]
+    },
+    {
+      "id": "kp568082",
+      "kpId": 568082,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Реальные пацаны",
+      "originalTitle": "Реальные пацаны",
+      "year": 2010,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/568082.jpg",
+      "genres": [
+        "комедия"
+      ],
+      "runtime": null,
+      "seasons": 13,
+      "episodes": 346,
+      "episodeRuntime": null,
+      "ratingKp": 6.8,
+      "ratingImdb": 5.8,
+      "overview": "Пермские друзья Колян, Антоха и Вован впускают в свою жизнь оператора. Самый народный мокьюментари-ситком",
+      "lists": [
+        "genre_комедия",
+        "series"
+      ]
+    },
+    {
+      "id": "tt21064076",
+      "kpId": 4443734,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Фишер",
+      "originalTitle": "Фишер",
+      "year": 2023,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/4443734.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал",
+        "детектив"
+      ],
+      "runtime": null,
+      "seasons": 4,
+      "episodes": 32,
+      "episodeRuntime": null,
+      "ratingKp": 7.9,
+      "ratingImdb": 6.8,
+      "overview": "Следователь Боков ищет серийного убийцу на юге России. Продолжение мрачного детектива с Иваном Янковским",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "genre_детектив",
+        "series"
+      ]
+    },
+    {
+      "id": "kp11832286",
+      "kpId": 11832286,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Стерлинг-Поинт",
+      "originalTitle": "Sterling Point",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/11832286.jpg",
+      "genres": [
+        "драма",
+        "детектив"
+      ],
+      "runtime": null,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 7.2,
+      "ratingImdb": null,
+      "overview": "Энни Джейкобсон и её брат-близнец, выросшие в Нью-Йорке с отцом-одиночкой, узнают, что их отчуждённый дедушка оставил им в наследство остров на озере в Канаде.",
+      "lists": [
+        "genre_драма",
+        "genre_детектив",
+        "series"
+      ]
+    },
+    {
+      "id": "tt1190634",
+      "kpId": 460586,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Пацаны",
+      "originalTitle": "The Boys",
+      "year": 2019,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/460586.jpg",
+      "genres": [
+        "драма",
+        "криминал",
+        "фантастика",
+        "боевик",
+        "комедия"
+      ],
+      "runtime": null,
+      "seasons": 5,
+      "episodes": 39,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": 8.6,
+      "overview": "Отряд простых смертных ставит на место продажных супергероев в трико. Дерзкий сериал по комиксу Гарта Энниса",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "genre_фантастика",
+        "genre_боевик",
+        "genre_комедия",
+        "series"
+      ]
+    },
+    {
+      "id": "kp6531565",
+      "kpId": 6531565,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Осколки",
+      "originalTitle": "The Shards",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6531565.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "детектив",
+        "ужасы"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 10,
+      "episodeRuntime": null,
+      "ratingKp": null,
+      "ratingImdb": null,
+      "overview": "Лос-Анджелес, 1981 год. 17-летний старшеклассник Эллис и его компания друзей учатся в престижной частной школе. Жизнь подростков переворачивается, когда в школе появляется новый ученик — Роберт Мэллори, чьё прибытие совпадает с началом серии убийств.",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_детектив",
+        "genre_ужасы",
+        "series"
+      ]
+    },
+    {
+      "id": "tt2861424",
+      "kpId": 685246,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Рик и Морти",
+      "originalTitle": "Rick and Morty",
+      "year": 2013,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/685246.jpg",
+      "genres": [
+        "фантастика",
+        "приключения",
+        "комедия",
+        "мультфильм"
+      ],
+      "runtime": null,
+      "seasons": 12,
+      "episodes": 94,
+      "episodeRuntime": null,
+      "ratingKp": 8.9,
+      "ratingImdb": 9,
+      "overview": "Гениальный ученый втягивает внука в безумные авантюры. Выдающийся анимационный сериал Дэна Хармона",
+      "lists": [
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_комедия",
+        "genre_мультфильм",
+        "series"
+      ]
+    },
+    {
+      "id": "kp5418936",
+      "kpId": 5418936,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Пленники",
+      "originalTitle": "Plenniki",
+      "year": 2023,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5418936.jpg",
+      "genres": [
+        "драма",
+        "криминал",
+        "детектив"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 16,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": null,
+      "overview": "Честный опер против международной мафии и коррумпированных коллег. Мрачный детектив о торговле людьми",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "genre_детектив",
+        "series"
+      ]
+    },
+    {
+      "id": "tt0141842",
+      "kpId": 79848,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Сопрано",
+      "originalTitle": "The Sopranos",
+      "year": 1999,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/79848.jpg",
+      "genres": [
+        "драма",
+        "криминал"
+      ],
+      "runtime": null,
+      "seasons": 6,
+      "episodes": 86,
+      "episodeRuntime": null,
+      "ratingKp": 8.9,
+      "ratingImdb": 9.2,
+      "overview": "Гангстер идет на терапию, чтобы разобраться в себе. Сериал HBO, с которого началась золотая эра телевидения",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "series"
+      ]
+    },
+    {
+      "id": "tt9054364",
+      "kpId": 1224030,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "О моём перерождении в слизь",
+      "originalTitle": "Tensei Shitara Slime Datta Ken",
+      "year": 2018,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1224030.jpg",
+      "genres": [
+        "приключения",
+        "фэнтези",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 5,
+      "episodes": 97,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8,
+      "overview": "Как бороться за свои права, когда ты — липкий комок? Озорное аниме с захватывающей интригой",
+      "lists": [
+        "genre_приключения",
+        "genre_фэнтези",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "series"
+      ]
+    },
+    {
+      "id": "tt2560140",
+      "kpId": 749374,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Атака титанов",
+      "originalTitle": "Shingeki no kyojin",
+      "year": 2013,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/749374.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "боевик",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 5,
+      "episodes": 90,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 9.1,
+      "overview": "Люди сражаются с титанами, которые мечтают их съесть. Самое эпичное аниме современности",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "series",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "kp5319835",
+      "kpId": 5319835,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Число зверя",
+      "originalTitle": "Число зверя",
+      "year": 2024,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5319835.jpg",
+      "genres": [
+        "криминал",
+        "детектив"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 12,
+      "episodeRuntime": null,
+      "ratingKp": null,
+      "ratingImdb": null,
+      "overview": "1990-е годы. Следователь Смоленской областной прокуратуры Алексей Кирсанов получает от главаря местной ОПГ «чёрную метку» без срока давности, на него начинается охота. Близкий друг и коллега Кирсанова — Игорь Сазонов — идёт на повышение и переводится на должность прокурора Ярославской области. Он предлагает Кирсанову перейти на новое место вместе с ним, подальше от бандитских разборок.",
+      "lists": [
+        "genre_криминал",
+        "genre_детектив",
+        "series"
+      ]
+    },
+    {
+      "id": "tt1196946",
+      "kpId": 412344,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Менталист",
+      "originalTitle": "The Mentalist",
+      "year": 2008,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/412344.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал",
+        "детектив"
+      ],
+      "runtime": null,
+      "seasons": 7,
+      "episodes": 151,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 8.2,
+      "overview": "Одинокий гений дедукции и психологии охотится на серийного убийцу. Детектив с харизматичным Саймоном Бейкером",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "genre_детектив",
+        "series"
+      ]
+    },
+    {
+      "id": "tt32603540",
+      "kpId": 5916296,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Ландыши",
+      "originalTitle": "Ландыши",
+      "year": 2024,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5916296.jpg",
+      "genres": [
+        "мелодрама",
+        "комедия",
+        "музыка"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 16,
+      "episodeRuntime": null,
+      "ratingKp": 8.2,
+      "ratingImdb": null,
+      "overview": "Мажорка в бегах выходит замуж за вологодского лейтенанта. Музыкальный ромком, прогремевший на всю страну",
+      "lists": [
+        "genre_мелодрама",
+        "genre_комедия",
+        "series"
+      ]
+    },
+    {
+      "id": "tt21618520",
+      "kpId": 5059049,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Телохранители",
+      "originalTitle": "Телохранители",
+      "year": 2023,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5059049.jpg",
+      "genres": [
+        "комедия"
+      ],
+      "runtime": null,
+      "seasons": 3,
+      "episodes": 49,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 6.8,
+      "overview": "Чтобы избежать тюрьмы, боксеры устраиваются в охрану к адвокату. Комедия о жизнерадостных покорителях Москвы",
+      "lists": [
+        "genre_комедия",
+        "series"
+      ]
+    },
+    {
+      "id": "tt9011124",
+      "kpId": 1100777,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Триггер",
+      "originalTitle": "Триггер",
+      "year": 2018,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1100777.jpg",
+      "genres": [
+        "драма"
+      ],
+      "runtime": null,
+      "seasons": 4,
+      "episodes": 48,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 7.4,
+      "overview": "Гениальный психолог или манипулятор? Один из самых популярных российских сериалов",
+      "lists": [
+        "genre_драма",
+        "series"
+      ]
+    },
+    {
+      "id": "kp6144216",
+      "kpId": 6144216,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Нам кранты",
+      "originalTitle": "Нам кранты",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6144216.jpg",
+      "genres": [
+        "криминал",
+        "комедия"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 8,
+      "episodeRuntime": null,
+      "ratingKp": 7.2,
+      "ratingImdb": null,
+      "overview": "Друзья случайно переходят дорогу местному авторитету. Безбашенная криминальная комедия с Макаром Хлебниковым",
+      "lists": [
+        "genre_криминал",
+        "genre_комедия",
+        "series"
+      ]
+    },
+    {
+      "id": "tt8772296",
+      "kpId": 1178445,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Эйфория",
+      "originalTitle": "Euphoria",
+      "year": 2019,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1178445.jpg",
+      "genres": [
+        "драма",
+        "криминал",
+        "мелодрама"
+      ],
+      "runtime": null,
+      "seasons": 3,
+      "episodes": 24,
+      "episodeRuntime": null,
+      "ratingKp": 7.5,
+      "ratingImdb": 8.2,
+      "overview": "Зумеры пытаются выжить в современном мире. Сериал, влюбивший нас в Зендею, Сидни Суини и Джейкоба Элорди",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "genre_мелодрама",
+        "series"
+      ]
+    },
+    {
+      "id": "tt40816852",
+      "kpId": 9006713,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Первая ракетка",
+      "originalTitle": "Первая ракетка",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/9006713.jpg",
+      "genres": [
+        "драма",
+        "спорт"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 8,
+      "episodeRuntime": null,
+      "ratingKp": 7.9,
+      "ratingImdb": null,
+      "overview": "Тренер-неудачник и дерзкая теннисистка покоряют большой спорт. Виртуозная драма с Данилой Козловским",
+      "lists": [
+        "genre_драма",
+        "series"
+      ]
+    },
+    {
+      "id": "kp6640984",
+      "kpId": 6640984,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Лаки",
+      "originalTitle": "Lucky",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6640984.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал"
+      ],
+      "runtime": null,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 6.3,
+      "ratingImdb": 6.8,
+      "overview": "Бывшая мошенница Лаки под влиянием обстоятельств вынуждена вернуться к своему криминальному прошлому и принять участие в крупном ограблении. Она надеется обрести свободу и навсегда оставить свою прежнюю жизнь, но всё идёт не по плану. Девушка пускается в бега, а за ней начинают охоту ФБР и опасный криминальный авторитет.",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "series"
+      ]
+    },
+    {
+      "id": "tt1520211",
+      "kpId": 508161,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Ходячие мертвецы",
+      "originalTitle": "The Walking Dead",
+      "year": 2010,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/508161.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "ужасы"
+      ],
+      "runtime": null,
+      "seasons": 11,
+      "episodes": 177,
+      "episodeRuntime": null,
+      "ratingKp": 8,
+      "ratingImdb": 8.1,
+      "overview": "Как сохранить человеческое лицо в условиях апокалипсиса? Грандиозная зомби-сага, совместившая хоррор и драму",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_ужасы",
+        "series"
+      ]
+    },
+    {
+      "id": "tt9813792",
+      "kpId": 4476885,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Извне",
+      "originalTitle": "From",
+      "year": 2022,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/4476885.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "детектив",
+        "фантастика",
+        "ужасы"
+      ],
+      "runtime": null,
+      "seasons": 5,
+      "episodes": 32,
+      "episodeRuntime": null,
+      "ratingKp": 7.6,
+      "ratingImdb": 7.8,
+      "overview": "Семья туристов пытается выбраться из зловещего города-ловушки. Сай-фай хоррор от авторов «Остаться в живых»",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_детектив",
+        "genre_фантастика",
+        "genre_ужасы",
+        "series"
+      ]
+    },
+    {
+      "id": "tt28429213",
+      "kpId": 5304403,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Слово пацана. Кровь на асфальте",
+      "originalTitle": "Слово пацана. Кровь на асфальте",
+      "year": 2023,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5304403.jpg",
+      "genres": [
+        "драма",
+        "криминал"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 8,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 7.6,
+      "overview": "«Пацаны не извиняются». Самый обсуждаемый российский сериал последних лет, который разошелся на цитаты и мемы",
+      "lists": [
+        "genre_драма",
+        "genre_криминал",
+        "series"
+      ]
+    },
+    {
+      "id": "tt3752220",
+      "kpId": 630165,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Универ. Новая общага",
+      "originalTitle": "Универ. Новая общага",
+      "year": 2011,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/630165.jpg",
+      "genres": [
+        "комедия"
+      ],
+      "runtime": null,
+      "seasons": 4,
+      "episodes": 300,
+      "episodeRuntime": null,
+      "ratingKp": 6.7,
+      "ratingImdb": 5.1,
+      "overview": "Кузя и Антон строят отношения с новыми соседками. Продолжение приключений самых известных студентов на ТВ",
+      "lists": [
+        "genre_комедия",
+        "series"
+      ]
+    },
+    {
+      "id": "tt10986410",
+      "kpId": 1309707,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Тед Лассо",
+      "originalTitle": "Ted Lasso",
+      "year": 2020,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1309707.jpg",
+      "genres": [
+        "комедия",
+        "спорт"
+      ],
+      "runtime": null,
+      "seasons": 4,
+      "episodes": 44,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.7,
+      "overview": "Тренер сборной колледжа Канзаса по американскому футболу Тед Лассо — неисправимый оптимист, всеобщий любимец и звезда YouTube. Новая владелица одного заштатного английского футбольного клуба решает использовать его в своих хитрых планах и предлагает Теду должность главного тренера, рассчитывая, что тот развалит клуб. Ничего не смысля в этом виде спорта, Тед приступает к своим новым обязанностям со всем присущим ему энтузиазмом.",
+      "lists": [
+        "genre_комедия",
+        "series"
+      ]
+    },
+    {
+      "id": "kp843389",
+      "kpId": 843389,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Невский",
+      "originalTitle": "Невский",
+      "year": 2015,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/843389.jpg",
+      "genres": [
+        "криминал",
+        "детектив"
+      ],
+      "runtime": null,
+      "seasons": 3,
+      "episodes": 39,
+      "episodeRuntime": null,
+      "ratingKp": 7.7,
+      "ratingImdb": 6.3,
+      "overview": "Честный опер противостоит криминалу и коррупции. Петербургская детективная сага с Антоном Васильевым",
+      "lists": [
+        "genre_криминал",
+        "genre_детектив",
+        "series"
+      ]
+    },
+    {
+      "id": "tt34809853",
+      "kpId": 6648249,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Пусть послужит вам уроком",
+      "originalTitle": "Chamgyoyuk",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6648249.jpg",
+      "genres": [
+        "драма",
+        "боевик",
+        "комедия"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 10,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.5,
+      "overview": "Чтобы навести порядок в учебных заведениях, министр создаёт Бюро оперативного надзора за образованием. Наделённые практически безграничными полномочиями инспекторы защищают жертв в системе образования от агрессоров, кем бы те ни являлись — преподавателями, учениками или их родителями.",
+      "lists": [
+        "genre_драма",
+        "genre_боевик",
+        "genre_комедия",
+        "series"
+      ]
+    },
+    {
+      "id": "tt0118414",
+      "kpId": 77183,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Одиссей",
+      "originalTitle": "The Odyssey",
+      "year": 1997,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/77183.jpg",
+      "genres": [
+        "драма",
+        "приключения",
+        "фэнтези",
+        "история"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 2,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": 7,
+      "overview": "Год за годом греки сражались под стенами Трои. Тысячи воинов полегли убитыми. Никто не знал, на чьей стороне боги. Греки роптали. Тогда их хитроумный царь Одиссей придумал, как проникнуть в Трою.\n\nЧерез 10 лет осады они победили. А Одиссей возгордился и бросил вызов богам. Оскорбленный Посейдон, бог морей, обрек его на вечные блуждания по волнам морей, чтобы он никогда не смог достичь берегов Итаки, не увидел сына и жену.",
+      "lists": [
+        "genre_драма",
+        "genre_приключения",
+        "genre_фэнтези",
+        "genre_история",
+        "series"
+      ]
+    },
+    {
+      "id": "tt0903747",
+      "kpId": 404900,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Во все тяжкие",
+      "originalTitle": "Breaking Bad",
+      "year": 2008,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/404900.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал"
+      ],
+      "runtime": null,
+      "seasons": 5,
+      "episodes": 62,
+      "episodeRuntime": null,
+      "ratingKp": 8.9,
+      "ratingImdb": 9.5,
+      "overview": "Умирающий учитель химии начинает варить мет ради благополучия семьи. Выдающийся драматический сериал 2010-х",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "series"
+      ]
+    },
+    {
+      "id": "tt9288030",
+      "kpId": 1209839,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Джек Ричер",
+      "originalTitle": "Reacher",
+      "year": 2022,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1209839.jpg",
+      "genres": [
+        "криминал",
+        "детектив",
+        "боевик"
+      ],
+      "runtime": null,
+      "seasons": 4,
+      "episodes": 25,
+      "episodeRuntime": null,
+      "ratingKp": 7.4,
+      "ratingImdb": 8,
+      "overview": "Бывший военный помогает полиции расследовать серию убийств. Олдскульный экшен-сериал по серии книг Ли Чайлда",
+      "lists": [
+        "genre_криминал",
+        "genre_детектив",
+        "genre_боевик",
+        "series"
+      ]
+    },
+    {
+      "id": "tt0773262",
+      "kpId": 277537,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Декстер",
+      "originalTitle": "Dexter",
+      "year": 2006,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/277537.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал",
+        "детектив"
+      ],
+      "runtime": null,
+      "seasons": 9,
+      "episodes": 106,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 8.6,
+      "overview": "Судмедэксперт в свободное время убивает преступников. Детектив, который заставляет сопереживать маньяку",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "genre_детектив",
+        "series"
+      ]
+    },
+    {
+      "id": "tt33332385",
+      "kpId": 6555657,
+      "tmdbId": null,
+      "type": "tv",
+      "title": "Бухта вдов",
+      "originalTitle": "Widow's Bay",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6555657.jpg",
+      "genres": [
+        "драма",
+        "комедия",
+        "ужасы"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 10,
+      "episodeRuntime": null,
+      "ratingKp": 7.5,
+      "ratingImdb": 8.3,
+      "overview": "Том Лофтис, мэр города на небольшом острове в Новой Англии, противостоит суеверным местным жителям, которые считают свой остров проклятым. Том всеми силами старается развивать экономику города и привлечь туристов, несмотря на отпор со стороны населения и зловещие стечения обстоятельств.",
+      "lists": [
+        "genre_драма",
+        "genre_комедия",
+        "genre_ужасы",
+        "series"
+      ]
+    },
+    {
+      "id": "kp5416975",
+      "kpId": 5416975,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Атака Титанов: Финал. Расширенная версия",
+      "originalTitle": "Shingeki no Kyojin: The Final Season - Kanketsu-hen",
+      "year": 2023,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5416975.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "боевик",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 7,
+      "episodeRuntime": null,
+      "ratingKp": 9.1,
+      "ratingImdb": 9.2,
+      "overview": "Противостояние людей и кровожадных великанов достигает апогея. Развязка эпичной аниме-саги — с новыми сценами!",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0385426",
+      "kpId": 230874,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Инициал Ди: Стадия первая",
+      "originalTitle": "Initial D First Stage",
+      "year": 1998,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/230874.jpg",
+      "genres": [
+        "драма",
+        "боевик",
+        "мультфильм",
+        "спорт",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 26,
+      "episodeRuntime": null,
+      "ratingKp": 8.8,
+      "ratingImdb": 8.5,
+      "overview": "Обычный школьник открывает для себя уличные гонки. Спортивное аниме о настоящем токийском дрифте",
+      "lists": [
+        "genre_драма",
+        "genre_боевик",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt32550889",
+      "kpId": 6802576,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Ателье колдовских колпаков",
+      "originalTitle": "Tongari Boushi no Atelier",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6802576.jpg",
+      "genres": [
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 25,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.7,
+      "overview": "Коко учится магии, чтобы исправить страшную ошибку. Одно из главных аниме года",
+      "lists": [
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt33175825",
+      "kpId": 6402838,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Атака Титанов: Последняя атака",
+      "originalTitle": "Shingeki no Kyojin Movie: Kanketsu-hen - The Last Attack",
+      "year": 2024,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6402838.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "боевик",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": 145,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.8,
+      "ratingImdb": 9.2,
+      "overview": "Армия титанов восстает против людей. Развязка культового аниме — с улучшенной графикой и сценой после титров",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt26743760",
+      "kpId": 5258557,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Монолог фармацевта",
+      "originalTitle": "Kusuriya no Hitorigoto",
+      "year": 2023,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5258557.jpg",
+      "genres": [
+        "драма",
+        "детектив",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 3,
+      "episodes": 49,
+      "episodeRuntime": null,
+      "ratingKp": 8.8,
+      "ratingImdb": 8.6,
+      "overview": "Находчивая служанка решает вылечить детей императора. Комедийный детектив из топа Кинопоиска",
+      "lists": [
+        "genre_драма",
+        "genre_детектив",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt22248376",
+      "kpId": 5401195,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Фрирен, провожающая в последний путь",
+      "originalTitle": "Sousou no Frieren",
+      "year": 2023,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5401195.jpg",
+      "genres": [
+        "драма",
+        "приключения",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 29,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.9,
+      "overview": "Эльфийка отправляется на тот свет — попрощаться с умершим соратником. Аниме с философской нотой",
+      "lists": [
+        "genre_драма",
+        "genre_приключения",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0213338",
+      "kpId": 229653,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Ковбой Бибоп",
+      "originalTitle": "Cowboy Bebop",
+      "year": 1998,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/229653.jpg",
+      "genres": [
+        "криминал",
+        "фантастика",
+        "приключения",
+        "боевик",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 26,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.9,
+      "overview": "Бывший полицейский Джет Блэк и человек с тёмным прошлым Спайк Шпигель совершенно не планировали увеличивать экипаж космического корабля «Бибоп», являющегося для них домом и средством передвижения. Но сети, раскинутые для поимки дорогостоящих отбросов общества, принесли им Фэй Валентайн — очаровательную картёжницу с колоссальным долгом, Эд — потерявшуюся компьютерную умницу и Эйн — предположительно, самую умную собаку на свете. Именно в таком составе экипаж «Бибопа» и продолжает своё дело — охоту за головами.",
+      "lists": [
+        "genre_криминал",
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_боевик",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0247874",
+      "kpId": 230878,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Инициал Ди: Стадия вторая",
+      "originalTitle": "Initial D Second Stage",
+      "year": 1999,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/230878.jpg",
+      "genres": [
+        "драма",
+        "боевик",
+        "мультфильм",
+        "спорт",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 26,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.2,
+      "overview": "Такуми встречает новых соперников на горных дорогах Японии. Продолжение драйвового аниме по популярной манге",
+      "lists": [
+        "genre_драма",
+        "genre_боевик",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0096633",
+      "kpId": 425875,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Легенда о героях галактики",
+      "originalTitle": "Ginga Eiyuu Densetsu",
+      "year": 1988,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/425875.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 4,
+      "episodes": 110,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 9,
+      "overview": "История многолетней войны между Галактической империей и Альянсом свободных планет. В масштабном конфликте с обеих сторон участвуют тысячи космических кораблей и миллионы солдат, командуют которыми два талантливых полководца и непримиримых противника.",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt15414478",
+      "kpId": 5088584,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Хвост Феи: Столетний квест",
+      "originalTitle": "Fairy Tail: 100 Years Quest",
+      "year": 2024,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5088584.jpg",
+      "genres": [
+        "боевик",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 25,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 7.5,
+      "overview": "Гильдия отчаянных магов берется за невыполнимую миссию. Продолжение культового фэнтези-аниме",
+      "lists": [
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0315008",
+      "kpId": 408596,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Крутой учитель Онидзука",
+      "originalTitle": "GTO",
+      "year": 1999,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/408596.jpg",
+      "genres": [
+        "мелодрама",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 43,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.5,
+      "overview": "Байкер из уличной банды устраивается работать в школу. Смешной и глубокий аниме-сериал по манге Тору Фудзисавы",
+      "lists": [
+        "genre_мелодрама",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "kp408758",
+      "kpId": 408758,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Код Гиас: Восставший Лелуш R2",
+      "originalTitle": "Kôdo giasu: Hangyaku no rurûshu R2",
+      "year": 2008,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/408758.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "приключения",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 25,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.7,
+      "overview": "Япония 2017 год, страна Восходящего Солнца оккупирована НеоБританией, и отныне называется сектор-11. Всех японцев загнали в тиски нищеты и страха, британцы же это привилегированный слой общества, которым всё дозволено, вплоть до истребления 11-ых. Лелуш Ламперг, на первый взгляд обычный студент старшей школы, но у них с сестрой есть тайна, они представители королевской семьи, от которых пытались избавиться. Его желание – месть. Но неожиданная встреча с давним другом и таинственной девушкой меняет всё… теперь у него есть сила!",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt30217403",
+      "kpId": 5458831,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Дандадан",
+      "originalTitle": "Dandadan",
+      "year": 2024,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5458831.jpg",
+      "genres": [
+        "фантастика",
+        "боевик",
+        "фэнтези",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 24,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.3,
+      "overview": "Внучка медиума и юный уфолог внезапно встречают призраков и пришельцев. Хитовое аниме — безумное и смешное",
+      "lists": [
+        "genre_фантастика",
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt33428606",
+      "kpId": 6634211,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Поднятие уровня в одиночку. Второе пробуждение",
+      "originalTitle": "Solo Leveling: ReAwakening",
+      "year": 2024,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6634211.jpg",
+      "genres": [
+        "боевик",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": 116,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.7,
+      "ratingImdb": 8.7,
+      "overview": "10 лет назад открылись врата в другой мир, где людям дозволено убивать монстров. Так появились охотники, преследующие и уничтожающие тварей. Но не каждому из них суждено повысить свой уровень и стать сильнее. Сон Джин-у был охотником низшего E-ранга, у которого не было ни единого шанса продвинуться по ранговой лестнице, пока однажды он случайно не очутился в подземелье D-ранга. Чуть не погибнув от рук чудовищ, Джин-у открывает секрет повышения уровня.",
+      "lists": [
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt15222080",
+      "kpId": 4624770,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Синяя тюрьма: Блю Лок",
+      "originalTitle": "Blue Lock",
+      "year": 2022,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/4624770.jpg",
+      "genres": [
+        "мультфильм",
+        "спорт",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 38,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.1,
+      "overview": "Тренер-деспот устраивает жесткий отбор среди футболистов в специальной тюрьме. Захватывающее спортивное аниме",
+      "lists": [
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "kp571322",
+      "kpId": 571322,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Завтрашний Джо",
+      "originalTitle": "Ashita no Jo",
+      "year": 1970,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/571322.jpg",
+      "genres": [
+        "драма",
+        "боевик",
+        "мультфильм",
+        "спорт",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 102,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.7,
+      "overview": "Сбежав из детского дома, подросток Джо Ябуки попадает в трущобы Токио, где умудряется подраться с алкоголиком Данпэем. Но это не обычный пьяница, в прошлом он был боксёром, у которого была мечта — стать лучшим в Японии. Или даже мире. Данпэй видит в Джо того, кто исполнит его мечту, и предлагает тому стать боксёром.",
+      "lists": [
+        "genre_драма",
+        "genre_боевик",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0304072",
+      "kpId": 81914,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Фландрийский пёс",
+      "originalTitle": "Flanders no Inu",
+      "year": 1997,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/81914.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": 102,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 7.7,
+      "overview": "Мальчик Нелло живёт с больным дедушкой и псом Патрашем в деревне на окраине Антверпена. Нелло наделён талантом художника, но зарабатывает на жизнь, продавая молоко на рынке. Он дружит с девочкой Алоис — дочерью жестокого землевладельца, который считает, что Нелло ей не ровня. Чтобы избавить дочь от общения с крестьянином, отец отсылает её на учёбу в Антверпен. Однажды прогуливаясь по рынку, Нелло узнаёт о конкурсе художников, победитель которого получит не только денежный приз, но и возможность изучать искусство в школе Антверпена.",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt1355642",
+      "kpId": 452838,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Стальной алхимик: Братство",
+      "originalTitle": "Fullmetal Alchemist: Brotherhood",
+      "year": 2009,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/452838.jpg",
+      "genres": [
+        "драма",
+        "приключения",
+        "боевик",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 65,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 9.1,
+      "overview": "Нарушив главный запрет Алхимии и попытавшись воскресить маму, талантливые братья Элрики заплатили высокую цену: младший, Альфонс, потерял тело, и теперь его душа прикреплена к стальным доспехам, а старший, Эдвард, лишился руки и ноги, поэтому ему приходится пользоваться протезами — автобронёй. Благодаря проявленным способностям Эд получил звание государственного алхимика и, таким образом, стал частью военной машины государства. Теперь у него есть шанс вернуть Альфонсу прежнее тело.",
+      "lists": [
+        "genre_драма",
+        "genre_приключения",
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt21030032",
+      "kpId": 5308105,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Звездное дитя",
+      "originalTitle": "Oshi no Ko",
+      "year": 2023,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5308105.jpg",
+      "genres": [
+        "драма",
+        "фэнтези",
+        "музыка",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 3,
+      "episodes": 36,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.3,
+      "overview": "Фанат перерождается в младенца — сына своей любимой певицы. Громкий хит о жестоком закулисье шоу-бизнеса",
+      "lists": [
+        "genre_драма",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0318871",
+      "kpId": 257376,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Берсерк",
+      "originalTitle": "Kenpu denki baruseruku",
+      "year": 1997,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/257376.jpg",
+      "genres": [
+        "драма",
+        "боевик",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 25,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.7,
+      "overview": "Таинственный воин бросает вызов безжалостному королю. Культовый мультсериал в декорациях Средневековья",
+      "lists": [
+        "genre_драма",
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt2098220",
+      "kpId": 647602,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Охотник х Охотник",
+      "originalTitle": "Hunter x Hunter",
+      "year": 2011,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/647602.jpg",
+      "genres": [
+        "боевик",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 148,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 9,
+      "overview": "Лицензия члена организации Охотников дает множество привилегий — возможность бесплатно путешествовать первым классом, доступ к закрытой информации и право брать крупные суммы денег в банках. Ежегодно проводится экзамен, на котором выбираются немногие достойные. Гон Фрикс отправляется на экзамен с целью стать Охотником и найти своего отца.",
+      "lists": [
+        "genre_боевик",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0877057",
+      "kpId": 406148,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Тетрадь смерти",
+      "originalTitle": "Desu noto",
+      "year": 2006,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/406148.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "криминал",
+        "детектив",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 37,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 8.9,
+      "overview": "Старшекласснику Лайту Ягами в руки попадает тетрадь синигами Рюка. Каждый человек, чьё имя записать в эту тетрадку, умрёт, поэтому Лайт решает бороться со злом на земле.",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_криминал",
+        "genre_детектив",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt28299608",
+      "kpId": 5595345,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "MF Призрак",
+      "originalTitle": "MF Ghost",
+      "year": 2023,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5595345.jpg",
+      "genres": [
+        "драма",
+        "мультфильм",
+        "спорт",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 4,
+      "episodes": 50,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": 7.4,
+      "overview": "Подросток участвует в престижных гонках и ищет отца. Трогательное и яркое аниме на высоких скоростях",
+      "lists": [
+        "genre_драма",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "kp1162606",
+      "kpId": 1162606,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Атака титанов: Выбор без сожалений",
+      "originalTitle": "Shingeki no Kyojin: Kuinaki Sentaku",
+      "year": 2014,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1162606.jpg",
+      "genres": [
+        "фантастика",
+        "боевик",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 2,
+      "episodeRuntime": null,
+      "ratingKp": 8.6,
+      "ratingImdb": null,
+      "overview": "Шайка юного Леви идет на дело, которое изменит их жизнь. Предыстория самого популярного героя «Атаки титанов»",
+      "lists": [
+        "genre_фантастика",
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt2374144",
+      "kpId": 707184,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Гинтама 2",
+      "originalTitle": "Gekijouban Gintama Kanketsu-hen: Yorozuyayo eien nare",
+      "year": 2013,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/707184.jpg",
+      "genres": [
+        "фантастика",
+        "приключения",
+        "боевик",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": 110,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.3,
+      "overview": "Гинтоки применяет таинственную силу и попадает в будущее, где его не будет. Этот будущий мир очень странный и хаотичный. Гинтоки в этом хаосе встречает разных существ, а также Синпати и Кагуру и попадает в непредвиденную цепочку событий, где ему открывается ошеломляющая правда.",
+      "lists": [
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_боевик",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "kp1198103",
+      "kpId": 1198103,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Баскетбол Куроко: Это лучший подарок!",
+      "originalTitle": "Kuroko no Basuke: Saikou no Present Desu",
+      "year": 2015,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1198103.jpg",
+      "genres": [
+        "боевик",
+        "мультфильм",
+        "спорт",
+        "короткометражка",
+        "аниме"
+      ],
+      "runtime": 23,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": null,
+      "overview": "",
+      "lists": [
+        "genre_боевик",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "kp958558",
+      "kpId": 958558,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Сёва-Гэнроку: Двойное самоубийство по ракуго",
+      "originalTitle": "Shouwa Genroku Rakugo Shinjuu",
+      "year": 2016,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/958558.jpg",
+      "genres": [
+        "драма",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 25,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.3,
+      "overview": "Бывший заключенный решает стать профессиональным рассказчиком. Аниме о целительной силе искусства",
+      "lists": [
+        "genre_драма",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0388629",
+      "kpId": 382731,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Ван-Пис",
+      "originalTitle": "One Piece",
+      "year": 1999,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/382731.jpg",
+      "genres": [
+        "приключения",
+        "боевик",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 1133,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 9,
+      "overview": "Паренёк со сверхспособностью охотится за пиратским кладом. Аниме по самой продаваемой манге в мире",
+      "lists": [
+        "genre_приключения",
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt7222086",
+      "kpId": 1047593,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Созданный в Бездне",
+      "originalTitle": "Made in Abyss",
+      "year": 2017,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1047593.jpg",
+      "genres": [
+        "фантастика",
+        "приключения",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 4,
+      "episodes": 27,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.3,
+      "overview": "Девочка ищет маму в недрах Земли, полных тайн, чудес природы и монстров. Анимация студии Kinema Citrus",
+      "lists": [
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "kp1115329",
+      "kpId": 1115329,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Легенда о героях галактики: Новый тезис",
+      "originalTitle": "Ginga Eiyuu Densetsu: Die Neue These - Kaikou",
+      "year": 2018,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1115329.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "боевик",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 4,
+      "episodes": 48,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 7.8,
+      "overview": "Две могущественные империи втянуты в нескончаемую войну. Ремейк знаменитой космической аниме-эпопеи",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_боевик",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt3443522",
+      "kpId": 818728,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Мастер Муси 2",
+      "originalTitle": "Mushishi Zoku Shou",
+      "year": 2014,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/818728.jpg",
+      "genres": [
+        "драма",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 23,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.8,
+      "overview": "На далеком Западе век пара и электричества, а в закрытой от иностранцев Японии все еще царит загадочный Восток, где люди верят, что все мы живем в плену иллюзии, а жить-то все равно надо. Любой японец знает, что за тонкой пеленой таятся иные миры и сущности, но соприкасаться с ними простому человеку не стоит. И все же, как говорят герои сериала, иногда «тайное должно становиться явным», и на этот случай есть свои специалисты. Например, мастера муси! \n\nГинко, молодой парень с седыми волосами и неизменной папиросой, все так же ходит по стране, изучая «муси» - духов мировой энергии, крупицы жизни, что кишат вокруг, но незримы простому смертному. Муси прекрасны и опасны как сама природа – могут что-то дать, а могут и отнять. Богов не видел никто, а вот знатоков муси в Японии хватает. Ведь тот, кто познал пути духов, становится немного мудрее и ближе к гармонии, потому способен помочь себе и людям. Этим Гинко и занимается, а значит, нас ждет немало новых прекрасных и поучительных историй!",
+      "lists": [
+        "genre_драма",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0928099",
+      "kpId": 408694,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Нодамэ Кантабиле",
+      "originalTitle": "Nodame kantâbire",
+      "year": 2007,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/408694.jpg",
+      "genres": [
+        "комедия",
+        "музыка",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 3,
+      "episodes": 45,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.1,
+      "overview": "Романтическая история о студентах японской консерватории. В первую очередь — о подающем большие надежды в качестве скрипача, пианиста и дирижёра (а также повара, бизнесмена, и кого угодно ещё) студента последнего курса Тияки и его знакомой, талантливой, но совершенно не от мира сего студентке предпоследнего курса Мэгуми.",
+      "lists": [
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0988818",
+      "kpId": 490128,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Гинтама",
+      "originalTitle": "Gintama",
+      "year": 2005,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/490128.jpg",
+      "genres": [
+        "фантастика",
+        "боевик",
+        "фэнтези",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 9,
+      "episodes": 368,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.7,
+      "overview": "Захватив Землю, пришельцы Аманто запретили ношение мечей. Единственный, в ком ещё жив подлинно японский дух — самоуверенный сластёна Гинтоки Саката. Неуклюжий очкарик Симпати нанялся к нему в ученики. Третьим в их команде стала прелестная Кагура из сильнейшей во вселенной семьи Ятудзоку, а с ней её питомец Садахару — пёсик размером с бегемота, обладающий милой привычкой грызть головы всем, кто подвернётся. Они называют себя мастерами на все руки и выполняют любые заказы — главное, чтобы заплатили.",
+      "lists": [
+        "genre_фантастика",
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0948103",
+      "kpId": 452973,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Гуррен-Лаганн",
+      "originalTitle": "Tengen toppa gurren lagann",
+      "year": 2007,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/452973.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "боевик",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 28,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.3,
+      "overview": "Сотни лет люди живут в глубоких пещерах, в постоянном страхе перед землетрясениями и обвалами. В одной из таких подземных деревень живет мальчик Симон и его духовный наставник — парень Камина. Камина верит, что наверху есть другой мир, без стен и потолков, его мечта — попасть туда.\n\nНо мечты остаются пустыми фантазиями, пока в один прекрасный день Симон случайно не находит сверло, оказавшееся ключом от странного железного лица в толще земли. В этот же день потолок пещеры рушится. Так начинается приключение Симона, Камины и их компаньонов в новом мире под открытым небом огромной вселенной.",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_боевик",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt32612521",
+      "kpId": 7524629,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Гачиакута",
+      "originalTitle": "Gachiakuta",
+      "year": 2025,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/7524629.jpg",
+      "genres": [
+        "боевик",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 24,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": null,
+      "overview": "Невинно осужденный подросток пытается выжить среди мусорных монстров. Аниме сценариста «Дандадана»",
+      "lists": [
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt5249462",
+      "kpId": 957840,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Город, в котором меня нет",
+      "originalTitle": "Boku dake ga inai machi",
+      "year": 2016,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/957840.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "фантастика",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 13,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.4,
+      "overview": "Жизнь мангаки нелегка. Тяжелый и кропотливый труд по достоинству вознаграждается в редких случаях. Авторские работы, в которые были вложены душа и нравоучительный посыл, не всегда достигают сердец читателей. Однажды понять, что ты пустой и скучный человек, не способный на большее — самый большой страх в жизни мангаки.\nСатору Фудзинума - тоже автор. В свои 28 он трудится не покладая рук, однако не все авторы гении, и далеко не у каждого получается выразить себя в своих работах. Множеством вопросов ежедневно задается Сатору, и боится однажды увидеть себя пустым и скучным. Но разве пустые и скучные люди могут так же ловко подмечать в своем окружении разные мелочи? Сатору может. Но признавать это в себе, то, что делает его далеко не посредственным, он не хочет. Впрочем, как и называть свой дар сверхъестественным.",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_фантастика",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt9886006",
+      "kpId": 1248827,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Задержи этот звук: Звуки жизни",
+      "originalTitle": "Kono Oto Tomare!: Sounds of Life",
+      "year": 2019,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1248827.jpg",
+      "genres": [
+        "драма",
+        "музыка",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 26,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.1,
+      "overview": "Школьник спасает клуб на грани закрытия. Аниме о любви к музыке, желании успеха и поиске единомышленников",
+      "lists": [
+        "genre_драма",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0994314",
+      "kpId": 408674,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Код Гиас: Восставший Лелуш",
+      "originalTitle": "Code Geass: Hangyaku no Lelouch",
+      "year": 2006,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/408674.jpg",
+      "genres": [
+        "триллер",
+        "драма",
+        "фантастика",
+        "приключения",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 3,
+      "episodes": 51,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 8.7,
+      "overview": "Альтернативная реальность: Британская империя захватила треть мира, обрушивая на непокорных мощь своей военной машины.\n\nВ Японии, захваченной и переименованной в Зону 11, вместе с младшей сестрой живёт старшеклассник Лелуш – изгнанный сын Императора, потерявший мать и право на престол. Юноша отличается от сверстников не только происхождением – он весьма одарённая личность, только где применить эти способности? Неожиданно Лелуш оказывается вовлечён в столкновение между японскими террористами и британскими солдатами. Так он знакомится с загадочной девушкой C.C. Она дарует ему сверхъестественную способность Гиас, позволяющую подчинять себе волю других людей.\n\nСкрывая лицо под маской и под именем Зеро, Лелуш присоединяется к подпольному движению, горя желанием отомстить Британии и отцу. Будучи студентом Академии Ашфорд, юноша вынужден вести двойную жизнь.",
+      "lists": [
+        "genre_триллер",
+        "genre_драма",
+        "genre_фантастика",
+        "genre_приключения",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt24229160",
+      "kpId": 5270353,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Кулинарные скитания в параллельном мире",
+      "originalTitle": "Tondemo Skill de Isekai Hourou Meshi",
+      "year": 2023,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5270353.jpg",
+      "genres": [
+        "приключения",
+        "фэнтези",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 2,
+      "episodes": 24,
+      "episodeRuntime": null,
+      "ratingKp": 8.5,
+      "ratingImdb": 7.6,
+      "overview": "Парень использует необычный дар, чтобы прокормить волка со зверским аппетитом. Уютное аниме студии MAPPA",
+      "lists": [
+        "genre_приключения",
+        "genre_фэнтези",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt10766468",
+      "kpId": 1291722,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Гинтама: Финал",
+      "originalTitle": "Gintama: The Final",
+      "year": 2021,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1291722.jpg",
+      "genres": [
+        "фантастика",
+        "боевик",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": 104,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.6,
+      "overview": "",
+      "lists": [
+        "genre_фантастика",
+        "genre_боевик",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt30476486",
+      "kpId": 5453250,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Волейбол!! Битва на мусорной свалке",
+      "originalTitle": "Haikyuu!! Movie: Gomisuteba no Kessen",
+      "year": 2024,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/5453250.jpg",
+      "genres": [
+        "драма",
+        "комедия",
+        "мультфильм",
+        "спорт",
+        "аниме"
+      ],
+      "runtime": 85,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 7.7,
+      "overview": "Несмотря на сильную конкуренцию, сборная команда старшей школы Карасуно по волейболу прошла предварительный этап турнира Харутака в префектуре Мияги и вышла в третий тур.",
+      "lists": [
+        "genre_драма",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt0423731",
+      "kpId": 256147,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Самурай Чамплу",
+      "originalTitle": "Samurai Champloo",
+      "year": 2004,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/256147.jpg",
+      "genres": [
+        "приключения",
+        "боевик",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 26,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.5,
+      "overview": "Мугэн - мечник с повадками брейкдансера, вспыльчивый, грубый и вечно голодный мужлан. Дзин - благородный, хорошо воспитанный ронин, чьё прошлое скрывает мрачную тайну.\n\nНет в мире двух других самураев, настолько непохожих друг на друга - а судьба не только сводит их в поединке, но и заставляет присоединиться к Фуу, целеустремленной юной особе, озабоченной поисками таинственного самурая, пахнущего подсолнухами. Это история о любви, дружбе и мужестве... или нет?!",
+      "lists": [
+        "genre_приключения",
+        "genre_боевик",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt8652818",
+      "kpId": 1199636,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Вайолет Эвергарден. Фильм",
+      "originalTitle": "Violet Evergarden: The Movie",
+      "year": 2020,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/1199636.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": 140,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.3,
+      "overview": "Вайолет пытается научиться жить без возлюбленного. Второе полнометражное аниме по мотивам одноименного сериала",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt4508902",
+      "kpId": 942544,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "One Punch Man",
+      "originalTitle": "One Punch Man",
+      "year": 2015,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/942544.jpg",
+      "genres": [
+        "фантастика",
+        "боевик",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 3,
+      "episodes": 36,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 8.6,
+      "overview": "Неуязвимый супергерой одержим поисками достойного противника. Сериал для поклонников «Хранителей» и «Пацанов»",
+      "lists": [
+        "genre_фантастика",
+        "genre_боевик",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt40548519",
+      "kpId": 11610176,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Троецарствие Японии",
+      "originalTitle": "Nippon Sangoku",
+      "year": 2026,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/11610176.jpg",
+      "genres": [
+        "драма",
+        "фантастика",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": null,
+      "episodes": null,
+      "episodeRuntime": null,
+      "ratingKp": 8.1,
+      "ratingImdb": null,
+      "overview": "",
+      "lists": [
+        "genre_драма",
+        "genre_фантастика",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt32501772",
+      "kpId": 6339996,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Самый известный диктор создаёт самый великий в мире клан",
+      "originalTitle": "Saikyou no Shienshoku «Wajutsushi» de Aru Ore wa Sekai Saikyou Clan wo Shitagaeru",
+      "year": 2024,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/6339996.jpg",
+      "genres": [
+        "приключения",
+        "боевик",
+        "фэнтези",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 12,
+      "episodeRuntime": null,
+      "ratingKp": 8.3,
+      "ratingImdb": 7.3,
+      "overview": "Ноэль решает стать борцом с монстрами, хотя у него нет нужных способностей. Вдохновляющее аниме о пути героя",
+      "lists": [
+        "genre_приключения",
+        "genre_боевик",
+        "genre_фэнтези",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "tt3592032",
+      "kpId": 838847,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Пинг-понг",
+      "originalTitle": "Ping Pong the Animation",
+      "year": 2014,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/838847.jpg",
+      "genres": [
+        "драма",
+        "мультфильм",
+        "спорт",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 11,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.6,
+      "overview": "История двух друзей - Ютаки и Макото. Оба - асы настольного тенниса, но подходы к игре и к жизни у них диаметрально противоположные.",
+      "lists": [
+        "genre_драма",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
+    },
+    {
+      "id": "kp455443",
+      "kpId": 455443,
+      "tmdbId": null,
+      "type": "anime",
+      "title": "Кланнад: Продолжение истории",
+      "originalTitle": "Clannad: After Story",
+      "year": 2008,
+      "poster": "https://kinopoiskapiunofficial.tech/images/posters/kp/455443.jpg",
+      "genres": [
+        "драма",
+        "мелодрама",
+        "комедия",
+        "мультфильм",
+        "аниме"
+      ],
+      "runtime": null,
+      "seasons": 1,
+      "episodes": 25,
+      "episodeRuntime": null,
+      "ratingKp": 8.4,
+      "ratingImdb": 8.6,
+      "overview": "Миновали летние каникулы, подходит к концу последний школьный год большинства основных героев. Томоя Окадзаки сделал выбор и теперь живет у своей девушки, Нагисы Фурукавы, семью которой до сих пор считает чудом – ведь это то, чего он был так долго лишен в детстве и юности. Поняв себя, Томоя открылся миру, и теперь вокруг него не только любимая и ее близкие, но и все, кому он помог, принес добро и подарил частичку счастья.",
+      "lists": [
+        "genre_драма",
+        "genre_мелодрама",
+        "genre_комедия",
+        "genre_мультфильм",
+        "genre_аниме",
+        "anime_top"
+      ]
     }
   ]
 }

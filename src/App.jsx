@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   loadCatalog,
   searchItems,
@@ -18,12 +18,21 @@ import {
   getCollection,
   toggleInCollection,
   inCollection,
+  replaceLibrary,
 } from './lib/library.js';
+import {
+  loadSyncConfig,
+  saveSyncConfig,
+  isConfigured,
+  fetchRemote,
+  pushRemote,
+} from './lib/sync.js';
 import { STATUS, STATUS_ORDER } from './lib/format.js';
 import MovieGrid from './components/MovieGrid.jsx';
 import MovieDetail from './components/MovieDetail.jsx';
 import CollectionView from './components/CollectionView.jsx';
 import AddPicker from './components/AddPicker.jsx';
+import SyncSettings from './components/SyncSettings.jsx';
 
 const TABS = [
   { id: 'catalog', label: 'Каталог' },
@@ -39,6 +48,81 @@ export default function App() {
   const [active, setActive] = useState(null); // открытый фильм
   const [openCol, setOpenCol] = useState(null); // id открытой подборки
   const [picker, setPicker] = useState(null); // { colId } — оверлей добавления
+
+  // --- Синхронизация с приватным репозиторием -------------------------
+  const [sync, setSync] = useState(loadSyncConfig);
+  const [syncStatus, setSyncStatus] = useState('off'); // off|sync|push|idle|error
+  const [syncMsg, setSyncMsg] = useState('');
+  const shaRef = useRef(null); // sha текущего remote library.json
+  const syncedTs = useRef(null); // updatedAt последнего синхронизированного состояния
+  const ready = useRef(false); // прошёл ли первичный pull (иначе не пушим)
+  const libRef = useRef(library);
+  libRef.current = library;
+  const pushTimer = useRef(null);
+
+  // Согласование локальной и облачной версии: новее по updatedAt — побеждает.
+  const reconcile = useCallback(async (cfg) => {
+    if (!isConfigured(cfg)) {
+      setSyncStatus('off');
+      ready.current = false;
+      return;
+    }
+    setSyncStatus('sync');
+    setSyncMsg('');
+    try {
+      const remote = await fetchRemote(cfg);
+      const local = libRef.current;
+      const localTs = local.updatedAt || '';
+      const remoteTs = remote?.data?.updatedAt || '';
+      if (remote && remoteTs >= localTs) {
+        shaRef.current = remote.sha;
+        syncedTs.current = remote.data.updatedAt || null;
+        setLibrary(replaceLibrary(remote.data));
+      } else {
+        // Локальная версия новее (или файла нет) — отправляем её в облако.
+        const newSha = await pushRemote(cfg, local, remote?.sha || null);
+        shaRef.current = newSha;
+        syncedTs.current = local.updatedAt || null;
+      }
+      ready.current = true;
+      setSyncStatus('idle');
+    } catch (e) {
+      setSyncStatus('error');
+      setSyncMsg(e.message);
+    }
+  }, []);
+
+  // Первичный pull при монтировании / смене настроек.
+  useEffect(() => {
+    reconcile(sync);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sync.repo, sync.token]);
+
+  // Автопуш при изменениях библиотеки (с дебаунсом).
+  useEffect(() => {
+    if (!isConfigured(sync) || !ready.current) return;
+    if (library.updatedAt === syncedTs.current) return; // это уже синхронизировано
+    clearTimeout(pushTimer.current);
+    pushTimer.current = setTimeout(async () => {
+      try {
+        setSyncStatus('push');
+        const newSha = await pushRemote(sync, libRef.current, shaRef.current);
+        shaRef.current = newSha;
+        syncedTs.current = libRef.current.updatedAt || null;
+        setSyncStatus('idle');
+      } catch (e) {
+        setSyncStatus('error');
+        setSyncMsg(e.message);
+      }
+    }, 1500);
+    return () => clearTimeout(pushTimer.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [library.updatedAt]);
+
+  const onSaveSync = (cfg) => {
+    saveSyncConfig(cfg);
+    setSync(cfg);
+  };
 
   useEffect(() => {
     loadCatalog().then(setCatalog).catch((e) => setError(e.message));
@@ -112,6 +196,11 @@ export default function App() {
               getStatus={statusOf}
               onOpen={setActive}
               onOpenCol={setOpenCol}
+              sync={sync}
+              syncStatus={syncStatus}
+              syncMsg={syncMsg}
+              onSaveSync={onSaveSync}
+              onSyncNow={() => reconcile(sync)}
             />
           ))}
       </main>
@@ -228,7 +317,19 @@ function SearchView({ catalog, getStatus, onOpen }) {
 }
 
 // --- Моя библиотека -----------------------------------------------------
-function LibraryView({ byId, library, setLibrary, getStatus, onOpen, onOpenCol }) {
+function LibraryView({
+  byId,
+  library,
+  setLibrary,
+  getStatus,
+  onOpen,
+  onOpenCol,
+  sync,
+  syncStatus,
+  syncMsg,
+  onSaveSync,
+  onSyncNow,
+}) {
   const [creating, setCreating] = useState(false);
   const [name, setName] = useState('');
   const c = counts(library);
@@ -329,6 +430,14 @@ function LibraryView({ byId, library, setLibrary, getStatus, onOpen, onOpenCol }
           );
         })
       )}
+
+      <SyncSettings
+        cfg={sync}
+        status={syncStatus}
+        msg={syncMsg}
+        onSave={onSaveSync}
+        onSyncNow={onSyncNow}
+      />
 
       <div className="lib-footer">
         <button className="ghost small" onClick={() => exportLibrary(library)}>

@@ -12,7 +12,9 @@ import {
 // Оверлей с деталями. Для сериалов/аниме показываем сезоны, серии,
 // хронометраж серии и полный хронометраж; для фильмов — только хронометраж.
 export default function MovieDetail({ item, status, onSetStatus, onClose }) {
-  const isSeries = item.type === 'tv' || item.type === 'anime';
+  // Сериал определяем по наличию сезонов/серий, а не по типу: аниме-фильм
+  // (например «Унесённые призраками») должен показывать хронометраж, а не сезоны.
+  const isSeries = item.seasons != null || item.episodes != null;
   const [broken, setBroken] = useState(false);
 
   return (

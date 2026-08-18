@@ -41,6 +41,14 @@ export function saveLibrary(lib) {
   return lib;
 }
 
+// Заменить библиотеку целиком, сохранив её updatedAt (для применения версии
+// из облака — чтобы сравнение «кто новее» осталось корректным).
+export function replaceLibrary(lib) {
+  const norm = normalize(lib);
+  localStorage.setItem(KEY, JSON.stringify(norm));
+  return norm;
+}
+
 // --- Статусы ------------------------------------------------------------
 
 // Установить статус (или снять, если status === null).

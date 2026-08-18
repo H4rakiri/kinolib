@@ -751,6 +751,95 @@ h3 {
   box-shadow: 0 0 12px var(--glow);
 }
 
+/* --- Синхронизация --- */
+.sync {
+  margin-top: 34px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.sync-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  border: none;
+  background: none;
+  color: var(--muted);
+  padding: 4px 0;
+  font-size: 13px;
+  text-align: left;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+.dot-ok {
+  background: var(--watched);
+  box-shadow: 0 0 8px rgba(67, 214, 160, 0.6);
+}
+.dot-err {
+  background: #ff6b6b;
+  box-shadow: 0 0 8px rgba(255, 107, 107, 0.6);
+}
+.dot-off {
+  background: var(--dim);
+}
+.dot-busy {
+  background: var(--neon);
+  box-shadow: 0 0 8px var(--glow);
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.sync-label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.sync-caret {
+  color: var(--dim);
+}
+.sync-panel {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.field span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.sync-note {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--dim);
+  margin: 0;
+}
+.sync-note code {
+  color: var(--muted);
+  font-size: 11px;
+}
+.sync-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
 /* --- Мобилка: вкладки уезжают в нижний таб-бар --- */
 @media (max-width: 719px) {
   .topbar {
