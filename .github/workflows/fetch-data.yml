@@ -1,7 +1,7 @@
 name: Обновление каталога
 
-# Раз в неделю (понедельник, 04:00 UTC) собираем свежий каталог и коммитим его.
-# Коммит в main автоматически запускает deploy.yml → сайт обновляется.
+# Раз в неделю (понедельник, 04:00 UTC) собираем свежий каталог и коммитим его,
+# затем вручную запускаем deploy.yml (коммит от GITHUB_TOKEN сам workflow не триггерит).
 # Можно запустить вручную через вкладку Actions (workflow_dispatch).
 on:
   schedule:
@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   fetch:
@@ -24,13 +25,21 @@ jobs:
           TMDB_TOKEN: ${{ secrets.TMDB_TOKEN }}
         run: node scripts/fetch-data.mjs
       - name: Закоммитить изменения
+        id: commit
         run: |
           git config user.name "kinolib-bot"
           git config user.email "bot@users.noreply.github.com"
           git add public/data/catalog.json
           if git diff --staged --quiet; then
             echo "Каталог не изменился."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Обновление каталога $(date -u +%Y-%m-%d)"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+      - name: Запустить деплой
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main
