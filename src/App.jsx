@@ -9,6 +9,9 @@ import {
   loadLibrary,
   setStatus as setStatusLib,
   getStatus,
+  setLiked as setLikedLib,
+  getLiked,
+  dismissItem,
   entriesByStatus,
   counts,
   exportLibrary,
@@ -21,6 +24,7 @@ import {
   getSnapshot,
   replaceLibrary,
 } from './lib/library.js';
+import { recommendList, tinderDeck } from './lib/discover.js';
 import {
   loadSyncConfig,
   saveSyncConfig,
@@ -36,10 +40,12 @@ import CollectionView from './components/CollectionView.jsx';
 import AddPicker from './components/AddPicker.jsx';
 import SearchView from './components/SearchView.jsx';
 import SyncSettings from './components/SyncSettings.jsx';
+import TinderView from './components/TinderView.jsx';
 
 const TABS = [
   { id: 'catalog', label: 'Каталог' },
   { id: 'search', label: 'Поиск' },
+  { id: 'tinder', label: 'Тиндер' },
   { id: 'library', label: 'Библиотека' },
 ];
 
@@ -162,8 +168,27 @@ export default function App() {
 
   const onSetStatus = (id, status, item) => {
     const snap = !byId.has(id) && item ? item : null;
-    setLibrary(setStatusLib(library, id, status, snap));
+    setLibrary(setStatusLib(libRef.current, id, status, snap));
   };
+
+  const onSetLiked = (id, liked, item) => {
+    const snap = !byId.has(id) && item ? item : null;
+    setLibrary(setLikedLib(libRef.current, id, liked, snap));
+  };
+
+  // --- «Тиндер»: стопка и обработчики свайпов -------------------------
+  const [deck, setDeck] = useState([]);
+  const [deckIndex, setDeckIndex] = useState(0);
+  const rebuildDeck = useCallback(() => {
+    if (catalog) {
+      setDeck(tinderDeck(catalog, libRef.current, 50));
+      setDeckIndex(0);
+    }
+  }, [catalog]);
+  useEffect(() => {
+    if (catalog && deck.length === 0) rebuildDeck();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [catalog]);
 
   if (error) return <div className="fatal">Ошибка: {error}</div>;
   if (!catalog) return <div className="loading">Загрузка каталога…</div>;
@@ -194,7 +219,13 @@ export default function App() {
 
       <main className="content">
         {tab === 'catalog' && (
-          <CatalogView catalog={catalog} getStatus={statusOf} onOpen={openItem} />
+          <CatalogView
+            catalog={catalog}
+            library={library}
+            resolve={resolve}
+            getStatus={statusOf}
+            onOpen={openItem}
+          />
         )}
         {tab === 'search' && (
           <SearchView
@@ -202,6 +233,21 @@ export default function App() {
             tmdbKey={tmdbKey}
             getStatus={statusOf}
             onOpen={openItem}
+          />
+        )}
+        {tab === 'tinder' && (
+          <TinderView
+            deck={deck}
+            index={deckIndex}
+            onAdvance={() => setDeckIndex((n) => n + 1)}
+            onRebuild={rebuildDeck}
+            onLeft={(it) => setLibrary(dismissItem(libRef.current, it.id))}
+            onRight={(it) => onSetStatus(it.id, 'want', it)}
+            onUp={(it, liked) =>
+              liked === null
+                ? onSetStatus(it.id, 'watched', it)
+                : onSetLiked(it.id, liked, it)
+            }
           />
         )}
         {tab === 'library' &&
@@ -243,7 +289,9 @@ export default function App() {
         <MovieDetail
           item={active}
           status={statusOf(active.id)}
+          liked={getLiked(library, active.id)}
           onSetStatus={onSetStatus}
+          onSetLiked={onSetLiked}
           onClose={() => setActive(null)}
         />
       )}
@@ -266,16 +314,23 @@ export default function App() {
 }
 
 // --- Каталог: коллекции + жанры (компактно, в одну прокручиваемую строку) ---
-function CatalogView({ catalog, getStatus, onOpen }) {
+function CatalogView({ catalog, library, resolve, getStatus, onOpen }) {
   const firstCol = catalog.collections[0]?.id;
   const [sel, setSel] = useState({ kind: 'collection', id: firstCol });
   const [sortBy, setSortBy] = useState('ratingImdb');
+  const [mode, setMode] = useState('top'); // top | random (только для коллекций)
+  const [seed, setSeed] = useState(0); // пересбор «Наугад»
+
+  const isCollection = sel.kind === 'collection';
+  const random = isCollection && mode === 'random';
+  const colKind = catalog.collections.find((c) => c.id === sel.id)?.kind;
 
   const items = useMemo(() => {
-    if (sel.kind === 'collection')
-      return itemsByCollection(catalog, sel.id, sortBy);
+    if (random) return recommendList(catalog, library, colKind, resolve, 100);
+    if (isCollection) return itemsByCollection(catalog, sel.id, sortBy);
     return itemsByGenre(catalog, sel.id, sortBy);
-  }, [catalog, sel, sortBy]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [catalog, sel, sortBy, mode, seed]);
 
   return (
     <div>
@@ -284,7 +339,7 @@ function CatalogView({ catalog, getStatus, onOpen }) {
           <button
             key={c.id}
             className={`chip ${
-              sel.kind === 'collection' && sel.id === c.id ? 'active' : ''
+              isCollection && sel.id === c.id ? 'active' : ''
             }`}
             onClick={() => setSel({ kind: 'collection', id: c.id })}
           >
@@ -307,14 +362,39 @@ function CatalogView({ catalog, getStatus, onOpen }) {
         ))}
       </div>
 
+      {isCollection && (
+        <div className="segmented">
+          <button
+            className={mode === 'top' ? 'active' : ''}
+            onClick={() => setMode('top')}
+          >
+            Топ
+          </button>
+          <button
+            className={mode === 'random' ? 'active' : ''}
+            onClick={() => setMode('random')}
+          >
+            Наугад
+          </button>
+        </div>
+      )}
+
       <div className="toolbar">
         <span className="count">{items.length}</span>
-        <button
-          className="sort-toggle"
-          onClick={() => setSortBy(sortBy === 'ratingImdb' ? 'year' : 'ratingImdb')}
-        >
-          {sortBy === 'ratingImdb' ? 'По оценке' : 'По году'} ↓
-        </button>
+        {random ? (
+          <button className="sort-toggle" onClick={() => setSeed((s) => s + 1)}>
+            Обновить ⟳
+          </button>
+        ) : (
+          <button
+            className="sort-toggle"
+            onClick={() =>
+              setSortBy(sortBy === 'ratingImdb' ? 'year' : 'ratingImdb')
+            }
+          >
+            {sortBy === 'ratingImdb' ? 'По оценке' : 'По году'} ↓
+          </button>
+        )}
       </div>
 
       <MovieGrid items={items} getStatus={getStatus} onOpen={onOpen} />

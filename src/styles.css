@@ -846,6 +846,297 @@ h3 {
   align-items: center;
 }
 
+/* --- Сегмент-переключатель (Топ / Наугад) --- */
+.segmented {
+  display: inline-flex;
+  gap: 2px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 3px;
+  margin-top: 14px;
+}
+.segmented button {
+  border: none;
+  background: none;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 7px;
+}
+.segmented button.active {
+  color: #06040c;
+  background: var(--neon);
+  box-shadow: 0 0 12px var(--glow);
+}
+
+/* --- Лайк / дизлайк --- */
+.like-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+.like-label {
+  font-size: 13px;
+  color: var(--muted);
+  margin-right: 2px;
+}
+.like-btn {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.like-btn:hover {
+  border-color: var(--line-strong);
+}
+.like-btn.on-like {
+  background: var(--watched);
+  border-color: var(--watched);
+  color: #06040c;
+}
+.like-btn.on-dislike {
+  background: #ff6b6b;
+  border-color: #ff6b6b;
+  color: #06040c;
+}
+
+/* --- Тиндер --- */
+.tinder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8px;
+}
+.tinder-stack {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 2 / 3;
+  margin: 0 auto;
+}
+.tinder-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--surface-2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  touch-action: none;
+  user-select: none;
+  will-change: transform;
+  cursor: grab;
+}
+.tinder-card:active {
+  cursor: grabbing;
+}
+.tinder-card.behind {
+  transform: scale(0.94) translateY(14px);
+  filter: brightness(0.7);
+  pointer-events: none;
+}
+.tinder-poster {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.tinder-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+.tinder-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.5) 38%,
+    rgba(0, 0, 0, 0) 62%
+  );
+}
+.tinder-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18px 18px 20px;
+}
+.tinder-title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.tinder-year {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+.tinder-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 13px;
+}
+.tinder-type {
+  color: rgba(255, 255, 255, 0.8);
+}
+.tinder-rate {
+  color: var(--neon-soft);
+  font-weight: 700;
+}
+.tinder-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.tinder-genre {
+  font-size: 11.5px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+.tinder-overview {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.stamp {
+  position: absolute;
+  top: 22px;
+  padding: 6px 14px;
+  border: 3px solid;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.stamp-yes {
+  right: 20px;
+  color: var(--watched);
+  border-color: var(--watched);
+  transform: rotate(14deg);
+}
+.stamp-no {
+  left: 20px;
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+  transform: rotate(-14deg);
+}
+.stamp-up {
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--neon-soft);
+  border-color: var(--neon-soft);
+}
+.tinder-rate-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 24px;
+}
+.rate-q {
+  font-size: 18px;
+  font-weight: 600;
+}
+.rate-row {
+  display: flex;
+  gap: 10px;
+}
+.rate-skip,
+.rate-cancel {
+  border: none;
+  background: none;
+  font-size: 13px;
+}
+.rate-skip {
+  color: var(--neon-soft);
+}
+.rate-cancel {
+  color: var(--dim);
+}
+.tinder-controls {
+  display: flex;
+  gap: 22px;
+  margin-top: 22px;
+}
+.swipe-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.12s, border-color 0.15s;
+}
+.swipe-btn:active {
+  transform: scale(0.9);
+}
+.swipe-btn.no {
+  color: #ff6b6b;
+}
+.swipe-btn.no:hover {
+  border-color: #ff6b6b;
+}
+.swipe-btn.up {
+  color: var(--neon-soft);
+  font-size: 18px;
+}
+.swipe-btn.up:hover {
+  border-color: var(--glow);
+}
+.swipe-btn.yes {
+  color: var(--watched);
+}
+.swipe-btn.yes:hover {
+  border-color: var(--watched);
+}
+.tinder-hint {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--dim);
+}
+.tinder-done {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--muted);
+}
+.tinder-done-emoji {
+  font-size: 44px;
+  margin-bottom: 12px;
+}
+.tinder-done p {
+  margin: 0 0 18px;
+}
+
 /* --- Мобилка: вкладки уезжают в нижний таб-бар --- */
 @media (max-width: 719px) {
   .topbar {

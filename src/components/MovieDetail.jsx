@@ -11,7 +11,14 @@ import {
 
 // Оверлей с деталями. Для сериалов/аниме показываем сезоны, серии,
 // хронометраж серии и полный хронометраж; для фильмов — только хронометраж.
-export default function MovieDetail({ item, status, onSetStatus, onClose }) {
+export default function MovieDetail({
+  item,
+  status,
+  liked,
+  onSetStatus,
+  onSetLiked,
+  onClose,
+}) {
   // Сериал определяем по наличию сезонов/серий, а не по типу: аниме-фильм
   // (например «Унесённые призраками») должен показывать хронометраж, а не сезоны.
   const isSeries = item.seasons != null || item.episodes != null;
@@ -94,6 +101,24 @@ export default function MovieDetail({ item, status, onSetStatus, onClose }) {
             );
           })}
         </div>
+
+        {status === 'watched' && onSetLiked ? (
+          <div className="like-row">
+            <span className="like-label">Как вам?</span>
+            <button
+              className={`like-btn ${liked === true ? 'on-like' : ''}`}
+              onClick={() => onSetLiked(item.id, liked === true ? null : true, item)}
+            >
+              👍 Понравилось
+            </button>
+            <button
+              className={`like-btn ${liked === false ? 'on-dislike' : ''}`}
+              onClick={() => onSetLiked(item.id, liked === false ? null : false, item)}
+            >
+              👎 Не понравилось
+            </button>
+          </div>
+        ) : null}
       </div>
     </div>
   );

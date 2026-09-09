@@ -11,7 +11,14 @@
 const KEY = 'kinolib.library.v1';
 
 export function emptyLibrary() {
-  return { version: 1, updatedAt: null, entries: {}, collections: [], items: {} };
+  return {
+    version: 1,
+    updatedAt: null,
+    entries: {},
+    collections: [],
+    items: {},
+    dismissed: {},
+  };
 }
 
 // Приводим любую загруженную структуру к актуальной форме (миграция).
@@ -22,6 +29,9 @@ function normalize(data) {
     entries: data.entries || {},
     collections: Array.isArray(data.collections) ? data.collections : [],
     items: data.items && typeof data.items === 'object' ? data.items : {},
+    // dismissed — id тайтлов, отвергнутых в «Тиндере» (свайп «неинтересно»),
+    // чтобы не подкидывать их снова.
+    dismissed: data.dismissed && typeof data.dismissed === 'object' ? data.dismissed : {},
   };
 }
 
@@ -82,6 +92,33 @@ export function setStatus(lib, id, status, snapshot) {
 
 export function getStatus(lib, id) {
   return lib.entries[id]?.status || null;
+}
+
+// --- Лайк / дизлайк (только для просмотренных) --------------------------
+
+// liked: true (понравилось) | false (не понравилось) | null (снять оценку).
+export function setLiked(lib, id, liked, snapshot) {
+  const prev = lib.entries[id] || {};
+  let next = {
+    ...lib,
+    entries: {
+      ...lib.entries,
+      [id]: {
+        ...prev,
+        // Оценка подразумевает, что фильм просмотрен.
+        status: 'watched',
+        addedAt: prev.addedAt || new Date().toISOString(),
+        liked: liked === null ? undefined : liked,
+      },
+    },
+  };
+  if (snapshot) next = withSnapshot(next, snapshot);
+  return saveLibrary(next);
+}
+
+export function getLiked(lib, id) {
+  const v = lib.entries[id]?.liked;
+  return v === true || v === false ? v : null;
 }
 
 export function entriesByStatus(lib, status) {
@@ -159,6 +196,20 @@ export function toggleInCollection(lib, colId, itemId, snapshot) {
 // Снапшот тайтла, сохранённый в библиотеке (для фильмов не из каталога).
 export function getSnapshot(lib, id) {
   return lib.items?.[id] || null;
+}
+
+// --- «Тиндер»: отвергнутые тайтлы ---------------------------------------
+
+export function dismissItem(lib, id) {
+  if (lib.dismissed?.[id]) return lib;
+  return saveLibrary({
+    ...lib,
+    dismissed: { ...lib.dismissed, [id]: Date.now() },
+  });
+}
+
+export function isDismissed(lib, id) {
+  return !!lib.dismissed?.[id];
 }
 
 // --- Экспорт / импорт ---------------------------------------------------
